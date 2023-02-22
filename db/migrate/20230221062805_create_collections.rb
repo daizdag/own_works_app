@@ -5,7 +5,6 @@ class CreateCollections < ActiveRecord::Migration[6.0]
       t.text       :point,         null: false 
       t.text       :content,       null: false 
       t.integer    :category_id,   null: false 
-      t.integer    :price,         null: false 
       t.references :user,          null: false, foreign_key: true
       t.timestamps
     end

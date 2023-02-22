@@ -22,7 +22,7 @@ class CollectionsController < ApplicationController
   private
 
   def collection_params
-    params.require(:collection).permit(:title, :point, :content, :category_id, :price, :image).merge(user_id: current_user.id)
+    params.require(:collection).permit(:title, :point, :content, :category_id, {images: []}).merge(user_id: current_user.id)
   end
 
 end

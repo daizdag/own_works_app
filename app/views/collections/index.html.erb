@@ -13,7 +13,7 @@
     <ul class='collection-lists'>
       <% @collections.each do |collection| %>
       <li class='collection'>
-        <%= link_to '#' do %>
+        <%= link_to collection_path(collection.id) do %>
         <div class='collectionimg-content'>
           <%= image_tag collection.images[0], class: "collection-img" if collection.images.attached? %>
         </div>

@@ -1,88 +1,27 @@
-#テーブル設計
-
-## user テーブル
-
-| Column             | Type   | Options                  |
-| ------------------ | ------ | -----------------------  |
-| nickname           | string | null: false              |
-| email              | string | null: false unique: true |
-| encrypted_password | string | null: false              |
+# アプリケーション名
 
 
-### Association
 
-- has_many   :collections
-- has_many   :orders
-- has_many   :favorites
-- has_many   :comments
-- has_one    :profile
+# アプリケーション概要
 
 
-## profiles テーブル
-
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| age                | string     | null: false                    |
-| gender_id          | integer    | null: false                    |
-| profile            | text       | null: false                    |
-| user               | references | null: false, foreign_key: true |
+# URL
 
 
-### Association
 
-- belongs_to :user
-
-
-## collections テーブル
-
-| Column               | Type       | Options                        |
-| -------------------- | ---------- | ------------------------------ |
-| title                | string     | null: false                    |
-| point                | text       | null: false                    |
-| content              | text       | null: false                    |
-| category_id          | integer    | null: false                    |
-| user                 | references | null: false, foreign_key: true |
+# テスト用アカウント
 
 
-### Association
-
-- belongs_to :user
-- has_one    :order
-- has_many   :favorites
-- has_many   :comments
-
-
-## orders テーブル
-
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| item               | references | null: false, foreign_key: true |
-| user               | references | null: false, foreign_key: true |
-
-
-### Association
-
-- belongs_to :user
-- belongs_to :collection
-- has_one    :address
-
-
-# addresses テーブル
-
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| first_name         | string     | null: false                    | 
-| last_name          | string     | null: false                    |
-| first_name_kana    | string     | null: false                    |
-| last_name_kana     | string     | null: false                    | 
-| post_number        | string     | null: false                    |
-| prefecture_id      | integer    | null: false                    |
-| municipalities     | string     | null: false                    |
-| address            | string     | null: false                    |
-| building_name      | string     |                                |
-| telephone_number   | string     | null: false                    |
-| order              | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to  :order
+# 利用方法
+## 自分の創作物を投稿する
+## 他者の作品を応援する
+# アプリケーションを作成した背景
+# 洗い出した要件
+# 実装した機能についての画像やGIF及びその説明
+# 実装予定の機能
+# データベース設計
+  sousaku.dio
+# 画面遷移図
+# 開発環境
+# ローカルでの動作環境
+# 工夫したポイント

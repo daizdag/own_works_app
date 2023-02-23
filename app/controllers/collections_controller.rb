@@ -1,5 +1,5 @@
 class CollectionsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @collections = Collection.all
@@ -16,6 +16,10 @@ class CollectionsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @collection = Collection.find(params[:id])
   end
 
 

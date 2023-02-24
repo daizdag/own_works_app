@@ -28,8 +28,9 @@ https://own-works.onrender.com
 # 実装した機能についての画像やGIF及びその説明
 # 実装予定の機能
 # データベース設計
-
+https://user-images.githubusercontent.com/115800558/221119921-537064ba-2621-457b-9863-236e3c623227.png
 # 画面遷移図
+https://user-images.githubusercontent.com/115800558/220937602-e6434939-bffa-42a8-acd5-83be9bdac82a.png
 # 開発環境
 ・フロントエンド<br>
 ・バックエンド<br>

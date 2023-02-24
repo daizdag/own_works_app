@@ -1,7 +1,7 @@
 <div class="items-sell-contents">
   <div class="items-sell-main">
-    <h2 class="items-sell-title">創作物情報を入力</h2>
-    <%= form_with model: @collection, url: collections_path, id: 'new-collection', local: true do |f| %>
+    <h2 class="items-sell-title">創作物情報を編集</h2>
+    <%= form_with model: @collection, id: 'new-collection', local: true do |f| %>
 
     <%= render 'shared/error_messages', model: @collection %>
       
@@ -51,8 +51,8 @@
       </div>
       <%# 下部ボタン %>
       <div class="sell-btn-contents">
-        <%= f.submit "投稿する" ,class:"sell-btn" %>
-        <%=link_to 'もどる', root_path, class:"back-btn" %>
+        <%= f.submit "変更する" , class:"sell-btn" %>
+        <%=link_to 'もどる', collection_path, class:"back-btn" %>
       </div>
       <%# /下部ボタン %>
     </div>

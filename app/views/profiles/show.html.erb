@@ -1,0 +1,28 @@
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+      <div class="page-heading-left">
+        <%= "#{@user.nickname}さんの情報"%>
+      </div>
+      <div class="page-heading-right">
+        <%= link_to "プロフィールを編集する", new_profile_path(current_user.id) %>
+      </div>
+      <% if @profile != nil %>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">名前</th>
+            <td class="table__col2"><%= @user.nickname %></td>
+          </tr>
+      </table>
+      <% else %>
+        <%= "aaaa" %>
+      <% end %>
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}さんのプロトタイプ"%>
+      </h2>
+      <div class="user__card">
+      </div>
+    </div>
+  </div>
+</div>

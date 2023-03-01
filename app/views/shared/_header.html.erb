@@ -7,18 +7,40 @@
       <div class="header-right">
         <% if user_signed_in? %>
           <div class="nav__right">
+            <%= link_to current_user.nickname, "/users/#{current_user.id}", class: :user_nickname %>さん
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-            <%= link_to current_user.nickname, "/users/#{current_user.id}", class: :user_nickname %>
           </div>
         <% else %>
           <div class="nav__right">
             <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
-            <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+            <%= link_to "アカウント登録", new_user_registration_path, class: :nav__btn %>
           </div>
         <% end %>
       </div>
     </div>
   </div>
   <div class="under-nav">
+    <ul class="global__list">
+      <li class="list__inner">
+        <a class="inner__item" href="#">
+          <span class="item__text">トップ</span>
+        </a>
+      </li>
+      <li class="list__inner">
+        <a class="inner__item" href="#">
+          <span class="item__text">クリコレとは</span>
+        </a>
+      </li>
+      <li class="list__inner">
+        <a class="inner__item" href="#">
+          <span class="item__text">カテゴリー</span>
+        </a>
+      </li>
+      <li class="list__inner">
+        <a class="inner__item" href="#">
+          <span class="item__text">作家ランキング</span>
+        </a>
+      </li>
+    </ul>
   </div>
 </header>

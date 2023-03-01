@@ -1,10 +1,220 @@
-.collection {
-  border: 1px solid black;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-img {
-  height: 300px;
-  width: 300px;
-  /* 縦横比を保ったまま、画像を縦横100pxのサイズに収めるプロパティです */
-  object-fit: contain;
+.main {
+  background: #f8f8f8;
+  width: 100vw;
 }
+
+
+/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
+.title-contents {
+  width: 100vw;
+  height: 500px;
+  margin-bottom: 100px;
+  background-image: image-url('a-book-g29e37931f_1920.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.service-title {
+  padding-left: 100px;
+  font-size: 8vh;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.service-explain {
+  padding-left: 120px;
+  font-size: 2.5vh;
+  line-height: 40px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.welcome-login-btn {
+  display: inline-block;
+  margin-left: 900px;
+  margin-top: 20px;
+  padding: 30px 60px;
+  font-size: 30px;
+  text-decoration: none;
+  user-select: none;
+  border: 2px #3e2900 solid;
+  border-radius: 15px;
+  color: #090601;
+  background-color: #ffa43c;
+}
+
+
+/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
+
+
+/* 画面中央の「会員数日本一位」帯部分*/
+.notification{
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.announcement-notice {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.announcement-notice_list {
+  margin: o auto;
+  background-color: #fff;
+}
+
+.announcement-notice__item {
+  display: flex;
+  border: 1px solid #c5c5c5;
+}
+
+.announcement-notice__item__date {
+  padding: 10px;
+  color: #090601;
+  border-right: 1px solid #c5c5c5;
+}
+
+.announcement-notice__item__link {
+  padding: 10px;
+  width: 800px;
+  font-weight: 600;
+}
+
+.google-btn {
+  height: 9vh;
+}
+
+/* //画面中央の「会員数日本一位」帯部分 */
+
+/* FURIMAの特徴 */
+.feature-contents {
+  padding: 5vh 15vw;
+}
+
+.feature-contents>.title {
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+}
+
+.feature-contents>.title::after {
+  content: '';
+  width: 70px;
+  height: 4px;
+  background-color: #3ccace;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.feature-lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.feature-lists>.list {
+  width: 33vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-list-text {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 50px;
+}
+
+.feature-list-description {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* //FURIMAの特徴 */
+
+/* 作品一覧 */
+
+.collection-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.collection-contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.collection-contents>.subtitle {
+  font-size: 3vh;
+  margin: 1vh 0;
+  text-decoration: none;
+  color: #ffae51;
+  font-weight: bold;
+}
+
+.collection-lists {
+  width: 80vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.collection {
+  margin: 5px;
+  border: 1px solid #fef7ed;
+  background-color: #faf4e9;
+}
+
+.collection-img-content {
+  position: relative;
+}
+
+.collection-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.collection-info {
+  padding: 0 1vw 1vw 1vw;
+}
+
+.star-btn {
+  display: flex;
+  align-items: center;
+}
+
+.star-icon {
+  height: 3vh;
+  width: 3vh;
+  margin-right: 0.5vw;
+}
+
+.star-count {
+  font-size: 2vh;
+}
+
+/* //作品一覧 */

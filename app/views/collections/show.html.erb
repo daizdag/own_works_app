@@ -1,69 +1,82 @@
 <%= render "shared/header" %>
-
-<div class="collection-show">
-  <div class="collection-box">
-    <h2 class="title">
-      <%= @collection.title %>
-    </h2>
-    <%= image_tag @collection.images[0], class: "main-image" %><br>
-    <div class="other-images">
-      <% @collection.images[1..-1].each do |image| %>
-        <div class="other-image">
-          <%= image_tag image %>
+<div class="main">
+  <div class="collection-show">
+    <div class="show-upper-var">
+      <div class="show-title">
+        collection
+      </div>
+      <% if user_signed_in? %>
+        <% if current_user == @collection.user %>
+          <div class="show-edit-btn">
+            <button type="button" class="edit-btn" id="lists">
+                <span data-component="text">Edit</span>
+            </button>
+            <ul class="show-edit-lists hidden" id="pull-down">
+              <li class="pull-down-list"><%= link_to edit_collection_path, method: :get, class: "edit-action-btn" do %>編集<% end %></li>
+              <li class="pull-down-list"><%= link_to collection_path, method: :delete, class: "delete-action-btn" do %>削除<% end %></li>
+            </ul>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="collection-box">
+      <div class="left-content">
+        <h2 class="title">
+          <%= @collection.title %>
+        </h2>
+        <%= image_tag @collection.images[0], class: "main-image" %><br>
+        <div class="other-images">
+          <% @collection.images[1..-1].each do |image| %>
+            <div class="other-image">
+              <%= image_tag image %>
+            </div>
+          <%end%>
         </div>
-      <%end%>
-    </div>
-    <div class="collection-explain-box">
-      <span><%= @collection.point %></span>
-    </div>
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-collection">出品者</th>
-          <td class="detail-value"><%= @collection.user.nickname %></td>
-        </tr>
-        <tr>
-          <th class="detail-collection">カテゴリー</th>
-          <td class="detail-value"><%= @collection.category.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-collection">商品の状態</th>
-          <td class="detail-value"><%= @collection.content %></td>
-        </tr>
-      </tbody>
-    </table>
+        <div class="favorite-count">
+        <span>お気に入り 0</span>
+      </div>
+      </div>
+      <div class="right-content">
+        <div class="collection-explain-box">
+          <span>こだわりポイント</span>
+          <div class="collection-point"><%= @collection.point %></div>
+        </div>
+        <div class="detail-table">
+              <div class="detail-collection">詳細説明<br>
+                <%= @collection.content %>
+              </div>
+              <div class="detail-collection">出品者
+                <%= @collection.user.nickname %>
+              </div>
+              <div class="detail-collection">カテゴリー
+                <%= @collection.category.name %>
+              </div>
+        </div>
+      </div>
+    </div> 
     <div class="option">
       <div class="favorite-btn">
-        <span>お気に入り 0</span>
+        <%= link_to "お気に入り登録", '#' %> 
       </div>
       <div class="report-btn">
         <%= link_to "不適切な商品の通報", '#' %>
       </div>
-    </div>
-  </div>
-  <% if user_signed_in? %>
-    <% if current_user == @collection.user %>
-      <%= link_to "商品の編集", edit_collection_path, method: :get, class: "collection-red-btn" %>
-      <p class="or-text">or</p>
-      <%= link_to "削除", collection_path, method: :delete, class:"collection-destroy" %>
-    <% end %> 
-    <div class="option">
-      <div class="favorite-btn">
-       <%= link_to "お気に入り登録", '#' %> 
+    </div>  
+    <div class="comment-form">
+      <div class="comment-box">
+        <h2>コメントをする</h2>
+        <form>
+          <textarea class="comment-text"></textarea>
+          <p class="comment-warn">
+            相手のことを考え丁寧なコメントを心がけましょう。
+            <br>
+            不快な言葉遣いなどは利用制限や退会処分となることがあります。
+          </p>
+          <button type="submit" class="comment-btn">
+            <span>コメントする<span>
+          </button>
+        </form>
       </div>
     </div>
-    <div class="comment-box">
-      <form>
-        <textarea class="comment-text"></textarea>
-        <p class="comment-warn">
-          相手のことを考え丁寧なコメントを心がけましょう。
-          <br>
-          不快な言葉遣いなどは利用制限や退会処分となることがあります。
-        </p>
-        <button type="submit" class="comment-btn">
-          <span>コメントする<span>
-        </button>
-      </form>
-    </div>
-  <% end %> 
+  </div>
 </div>

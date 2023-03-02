@@ -1,4 +1,4 @@
-<%= render "shared/header" %>
+<%= render 'shared/header' %>
 <div class="main">
   <div class="collection-show">
     <div class="show-upper-var">
@@ -8,12 +8,12 @@
       <% if user_signed_in? %>
         <% if current_user == @collection.user %>
           <div class="show-edit-btn">
-            <button type="button" class="edit-btn" id="lists">
+            <button type="button" class="edit-btn" id="edit-lists">
                 <span data-component="text">Edit</span>
             </button>
-            <ul class="show-edit-lists hidden" id="pull-down">
-              <li class="pull-down-list"><%= link_to edit_collection_path, method: :get, class: "edit-action-btn" do %>編集<% end %></li>
-              <li class="pull-down-list"><%= link_to collection_path, method: :delete, class: "delete-action-btn" do %>削除<% end %></li>
+            <ul class="show-edit-lists hidden" id="show-edit-list">
+              <li class="edit-list"><%= link_to "編集", edit_collection_path, method: :get, class: "edit-action-btn" %></li>
+              <li class="edit-list"><%= link_to "削除", collection_path, method: :delete, class: "delete-action-btn" %></li>
             </ul>
           </div>
         <% end %>

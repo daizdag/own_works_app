@@ -2,8 +2,7 @@
   <div class="main">
   <% if user_signed_in? %>
      <div class='title-contents'>
-        <%= link_to new_collection_path, class: 'welcome-login-btn' do %>投稿はこちら！
-        <% end %>
+       <%= link_to "登録はこちら！", new_user_registration_path, class: 'welcome-login-btn' %>
       <h2 class='service-title'>
         ようこそ！<br>クリコレへ！
       </h2>
@@ -19,8 +18,7 @@
     <% end %> 
   <% else %>
     <div class='title-contents'>
-        <%= link_to new_user_registration_path, class: 'welcome-login-btn' do %>登録はこちら！
-        <% end %>
+        <%= link_to "登録はこちら！", new_user_registration_path, class: 'welcome-login-btn' %>
       <h2 class='service-title'>
         ようこそ！<br>クリコレへ！
       </h2>

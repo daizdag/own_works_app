@@ -1,5 +1,7 @@
 header {
   background-color: #ffffff;
+  position: relative;
+  z-index: 10000;
 }
 .inner {
   width: calc( 100vw - 15% );
@@ -7,6 +9,8 @@ header {
   margin: 0 auto;
 }
 .upper-nav {
+  margin: 0;
+  padding: 0;
   height: 65px;
   width: 100%;
   display: flex;
@@ -19,6 +23,11 @@ header {
   text-decoration: none;
   color: #111111;
 }
+
+.kore {
+  color: #f57a00;
+}
+
 .nav__btn{
   display: inline-block;
   padding: 0.8em 1.8em;
@@ -31,32 +40,17 @@ header {
   border-radius: 3px;
   transition: 0.4s ease;
 }
+
 .nav__btn:hover{
   color: #fff;
   background: #f57a00;
 }
 
-.nav__logout{
-  display: inline-block;
-  padding: 0.4em 1em;
-  margin-left: 1em;
-  font-size: 0.7em;
-  color: #f57a00;
-  text-decoration: none;
-  user-select: none;
-  border: 1px #f57a00 solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
-}
-.nav__logout:hover{
-  color: #fff;
-  background: #f57a00;
+.header-right {
+  height: 20px;
 }
 
 .user_nickname {
-  display: inline-block;
-  padding: 0.4em 0.5em;
-  margin-left: 1em;
   font-size: 1.2em;
   color: #f57a00;
   text-decoration: none;
@@ -64,6 +58,41 @@ header {
   transition: 0.4s ease;
 }
 
+.user-menu-wrapper {
+  position: absolute;
+  right: 100px;
+  top: 50px;
+  background: #fff;
+  border: 1px solid #c36201;
+}
+
+.user-menu-list {
+  width: 140px;
+  text-align: center;
+  border-bottom: 1px solid #c36201;
+}
+
+.my_page_link {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #f57a00;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+.nav__logout{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #f57a00;
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+.nav__logout:hover{
+  color: #fff;
+  background: #f57a00;
+}
 
 .under-nav {
   width: 100%;
@@ -87,4 +116,5 @@ header {
 .inner__item {
   padding: 17px;
   margin-right: 17px;
+  color: #fff;
 }

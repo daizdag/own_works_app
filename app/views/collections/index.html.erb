@@ -1,40 +1,85 @@
 <%= render 'shared/header' %>
-<% if user_signed_in? %>
-  <%= link_to(new_collection_path, class: 'purchase-btn') do %>
-    <span class='purchase-btn-text'>作ったものを投稿する</span>
-  <% end %>  
-<% end %>
-<h1>トップページ</h1>
-<div class='collection-contents'>
+  <div class="main">
+  <% if user_signed_in? %>
+     <div class='title-contents'>
+       <%= link_to "登録はこちら！", new_user_registration_path, class: 'welcome-login-btn' %>
+      <h2 class='service-title'>
+        ようこそ！<br>クリコレへ！
+      </h2>
+      <p class='service-explain'>
+        クリコレはだれでもかんたんに作品を投稿
+      </p>
+      <p class='service-explain'>
+        アカウントを登録して創作物を投稿しよう！
+      </p>
+    </div>
+    <%= link_to(new_collection_path, class: 'purchase-btn') do %>
+      <span class='purchase-btn-text'>作ったものを<br>投稿する</span>
+    <% end %> 
+  <% else %>
+    <div class='title-contents'>
+        <%= link_to "登録はこちら！", new_user_registration_path, class: 'welcome-login-btn' %>
+      <h2 class='service-title'>
+        ようこそ！<br>クリコレへ！
+      </h2>
+      <p class='service-explain'>
+        クリコレはだれでもかんたんに作品を投稿
+      </p>
+      <p class='service-explain'>
+        アカウントを登録して創作物を投稿しよう！
+      </p>
+    </div>
+  <% end %>
+  <h1 class="notification">お知らせ</h1>
+  <div class="announcement-notice">
+    <ul class="announcement-notice_list">
+      <li class="announcement-notice__item">
+        <div class="announcement-notice__item__date">2023/02/27</div>
+        <%= link_to "#", class: "announcement-notice__item__link" do %>このアプリについて<% end %>
+      </li>
+      <li class="announcement-notice__item">
+        <div class="announcement-notice__item__date">2023/02/27</div>
+        <%= link_to "#", class: "announcement-notice__item__link" do %>寄付機能について<% end %>
+      </li>
+      <li class="announcement-notice__item">
+        <div class="announcement-notice__item__date">2023/02/26</div>
+        <%= link_to "#", class: "announcement-notice__item__link" do %>作品投稿の注意<% end %>
+      </li>
+      <li class="announcement-notice__item">
+        <div class="announcement-notice__item__date">2023/02/26</div>
+        <%= link_to "#", class: "announcement-notice__item__link" do %>サービス開始のお知らせ<% end %>
+      </li>
+    </ul>
+  </div>
+  <div class='collection-contents'>
     <h2 class='title'>ピックアップカテゴリー</h2>
     <div class="subtitle" >
       新規投稿作品
     </div>
     <ul class='collection-lists'>
       <% @collections.each do |collection| %>
-      <li class='collection'>
-        <%= link_to collection_path(collection.id) do %>
-        <div class='collectionimg-content'>
-          <%= image_tag collection.images[0], class: "collection-img" if collection.images.attached? %>
-        </div>
-        <div class='collection-info'>
-          <h3 class='collection-title'>
-            <%= collection.title %>
-          </h3>
-          <div class='collection-category'>
-            <%= collection.category.name %>
-            <div class='star-btn'>
-              <span class='star-count'>0</span>
+        <li class='collection'>
+          <%= link_to collection_path(collection.id) do %>
+          <div class='collectionimg-content'>
+            <%= image_tag collection.images[0], class: "collection-img" if collection.images.attached? %>
+          </div>
+          <div class='collection-info'>
+            <h3 class='collection-title'>
+              <%= collection.title %>
+            </h3>
+              <div class='star-btn'>
+                <%= image_tag "star.png", class:"star-icon" %>
+                <span class='star-count'>0</span>
+              </div>
+            <div class="collection-user">
+              <%= link_to '#' do %>
+                <%= collection.user.nickname %>
+              <% end %>
             </div>
           </div>
-          <div class="collection-user">
-            <%= link_to '#' do %>
-              <%= collection.user.nickname %>
-            <% end %>
-          </div>
-        </div>
-        <% end %>
-      </li>
+          <% end %>
+        </li>
       <% end %>
     </ul>
   </div>
+</div>

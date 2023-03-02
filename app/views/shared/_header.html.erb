@@ -1,20 +1,52 @@
 <header>
-  <div class="header-bar">
-    <div class="header-left">
-      <%= link_to "collections", root_path, class: :app_title %>
+  <div class="inner">
+    <div class="upper-nav">
+      <div class="header-left">
+        <%= link_to root_path, class: :app_title do %>
+          クリ<span class="kore">コレ！</span>
+        <% end %>
+      </div>
+      <div class="header-right">
+        <% if user_signed_in? %>
+          <div class="nav__right">
+            <div class="user_nickname" id="lists"><%= current_user.nickname %></div>
+              <ul class="user-menu-wrapper hidden" id="user-menu-list">
+                <li class="user-menu-list"><%= link_to "マイページ", class: :my_page_link %></li>
+                <li class="user-menu-list"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %></li>
+                <li class="user-menu-list">マイページ</li>
+              </ul>
+          </div>
+        <% else %>
+          <div class="nav__right">
+            <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+            <%= link_to "アカウント登録", new_user_registration_path, class: :nav__btn %>
+          </div>
+        <% end %>
+      </div>
     </div>
-    <div class="header-right">
-       <% if user_signed_in? %>
-        <div class="nav__right">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
-          <%= link_to current_user.nickname, "/users/#{current_user.id}", class: :user_nickname %>
-        </div>
-      <% else %>
-        <div class="nav__right">
-          <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
-          <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
-        </div>
-      <% end %>
-    </div>
+  </div>
+  <div class="under-nav">
+    <ul class="global__list">
+      <li class="list__inner">
+        <a class="inner__item" href="/">
+          <span class="item__text">トップ</span>
+        </a>
+      </li>
+      <li class="list__inner">
+        <a class="inner__item" href="#">
+          <span class="item__text">クリコレとは</span>
+        </a>
+      </li>
+      <li class="list__inner">
+        <a class="inner__item" href="#">
+          <span class="item__text">カテゴリー</span>
+        </a>
+      </li>
+      <li class="list__inner">
+        <a class="inner__item" href="#">
+          <span class="item__text">ランキング</span>
+        </a>
+      </li>
+    </ul>
   </div>
 </header>

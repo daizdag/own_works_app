@@ -1,0 +1,40 @@
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.log_in_btn {
+  font-size: 500px;
+}
+
+.login-red-btn {
+  width: 100%;
+  line-height: 28px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red;
+}
+
+.new_user_password_btn {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.new-user-btn {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}

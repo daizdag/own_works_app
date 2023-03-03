@@ -8,6 +8,13 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @collection = Collection.find(params[:collection_id])
+    comment = @collection.comments.find(params[:id])
+    comment.destroy
+    redirect_to collection_path(@collection)
+  end
+
   private
   def comment_params
     params.require(:comment).permit(:text).merge(user_id: current_user.id, collection_id: params[:collection_id])

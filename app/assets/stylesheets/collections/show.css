@@ -6,7 +6,7 @@
 
 .collection-show {
   width: 70vw;
-  padding-top: 60px;
+  padding: 60px 0;
   margin: 0 auto;
 }
 
@@ -146,6 +146,59 @@
 
 /* /商品の概要 */
 
+.comments {
+  padding-top: 60px;
+  background-color: #fff;
+}
+
+.comment-list {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid #f57a00;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.comment {
+  width: 60%;
+  margin: 20px auto 0;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.user-info {
+  color: #f57a00;
+}
+
+.user-info span {
+  color: #2d2d2d;
+}
+
+.comment-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-text {
+  width: 420px;
+  font-size: 20px;
+  word-break:break-all
+}
+
+.comment-content span {
+  width: 400px;
+}
+
+.comment-delete-btn {
+  height: 16px;
+  width: 30px;
+  padding: 0 3px;
+  border: 1px solid #2d2d2d;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 10px;
+}
+
 .comment-form {
   width: 70vw;
   height: 350px;
@@ -162,12 +215,7 @@
   text-align: center;
 }
 
-.comment-box h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.comment-text {
+.comment-text-form {
   width: 100%;
   height: 60px;
   padding: 10px;
@@ -191,16 +239,6 @@
   min-width: 150px;
   font-size: 18px;
   border-radius: 100px;
-  margin-bottom: 2vh;
-}
-
-.comment-flag {
-  display: flex;
-  justify-content: center;
-}
-
-.comment-flag-icon {
-  margin: 10px 5px 0 0;
 }
 
 .links {
@@ -214,13 +252,4 @@
   font-size: 30px;
   text-decoration: none;
   color: #3CCACE;
-}
-
-.another-item {
-  display: block;
-  margin: 30px 0px 8px;
-  color: #3CCACE;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 23px;
 }

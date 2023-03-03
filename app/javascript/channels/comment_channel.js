@@ -17,10 +17,15 @@ if(location.pathname.match(/\/collections\/\d/)){
 
     received(data) {
     const html = `
-      <div class="comment">
-        <p class="user-info">${data.user.nickname}： </p>
+    <div class="comment">
+      <div class="user-info">${data.user.nickname}</div>
+    <div class="comment-content">
+        <div class="comment-text">
         <p>${data.comment.text}</p>
-      </div>`
+      </div>
+      <a class="comment-delete-btn" data-method="delete" href="/collections/${data.comment.collection}/comments/${data.comment.id}">削除</a>
+    </div>
+  </div>`
     const comments = document.getElementById("comments")
     comments.insertAdjacentHTML('beforeend', html)
     const commentForm = document.getElementById("comment-form")

@@ -107,9 +107,6 @@
 /* /商品画像 */
 
 /* 商品名と商品説明 */
-.new-collections {
-  padding: 2vh 0;
-}
 
 .collections-title {
   height: 25px;
@@ -132,7 +129,7 @@
 }
 
 .collections-text {
-  width: 800px;
+  width: 80%;
   height: 60px;
   padding: 10px;
   border-radius: 4px;
@@ -181,7 +178,7 @@
 /* 下部ボタン */
 .sell-btn-contents {
   margin: 50px 0;
-  width: 100%;
+  width: 90%;
   text-align: center;
 }
 
@@ -189,7 +186,7 @@
   background: #ea352d;
   border: 1px solid #ea352d;
   color: #fff;
-  width: 60%;
+  width: 50%;
   height: 50px;
   font-size: 14px;
   margin-right: 60px;
@@ -199,6 +196,7 @@
   background: #aaa;
   border: 1px solid #aaa;
   color: #fff;
+  width: 40%;
   text-decoration: none;
   padding: 17px 100px;
 }

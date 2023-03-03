@@ -22,6 +22,8 @@ class CollectionsController < ApplicationController
 
   def show
     @collection = Collection.find(params[:id])
+    @comments = @collection.comments.includes(:user)
+    @comment = Comment.new
   end
 
   def edit

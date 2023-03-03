@@ -72,9 +72,15 @@
                 <span class='star-count'>0</span>
               </div>
             <div class="collection-user">
-              <%= link_to '#' do %>
+            <% if  current_user == collection.user %>
+              <%= link_to  profiles_path(@user) do %>
                 <%= collection.user.nickname %>
               <% end %>
+            <% else %>
+              <%= link_to user_path(collection.user) do %>
+                <%= collection.user.nickname %>
+              <% end %>
+            <% end %>
             </div>
           </div>
           <% end %>

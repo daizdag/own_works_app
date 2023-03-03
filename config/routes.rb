@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :collections do
     resources :comments, only: [:create, :destroy]
   end
-  resources :profiles, only: [:show]
+  resources :user, only: [:show]
+  resource :profiles, only: [:show, :edit, :update]
 end

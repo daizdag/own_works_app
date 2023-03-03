@@ -11,7 +11,7 @@
           <div class="nav__right">
             <div class="user_nickname" id="lists"><%= current_user.nickname %></div>
               <ul class="user-menu-wrapper hidden" id="user-menu-list">
-                <li class="user-menu-list"><%= link_to "マイページ", class: :my_page_link %></li>
+                <li class="user-menu-list"><%= link_to "マイページ", profiles_path(@user), class: :my_page_link %></li>
                 <li class="user-menu-list"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %></li>
                 <li class="user-menu-list">マイページ</li>
               </ul>

@@ -36,10 +36,13 @@ https://github.com/daizdag/own_works_app
 
 
 # 実装予定の機能
-・お気に入り機能
+・フォロー機能<br>
+・他者応援機能(寄付機能)<br>
+・お気に入り機能<br>
+・カテゴリー別検索機能<br>
 
 # データベース設計
-https://user-images.githubusercontent.com/115800558/221119921-537064ba-2621-457b-9863-236e3c623227.png
+https://user-images.githubusercontent.com/115800558/222878759-247e533a-a415-4327-84f1-039674e6e1ed.png
 # 画面遷移図
 https://user-images.githubusercontent.com/115800558/220937602-e6434939-bffa-42a8-acd5-83be9bdac82a.png
 # 開発環境

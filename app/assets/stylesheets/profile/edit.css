@@ -1,0 +1,43 @@
+.edit-nickname {
+  width: 350px;
+}
+
+.edit-age {
+  width: 320px;
+}
+
+.edit-select-box{
+  width: 100px;
+  height: 40px;
+  text-align: center;
+}
+
+.edit-introduction {
+  width: 390px;
+  height: 220px;
+}
+
+.edit-btn-contents {
+  margin: 50px 0;
+  width: 65%;
+  text-align: center;
+}
+
+.edit-profile-btn {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 50%;
+  height: 50px;
+  font-size: 14px;
+  margin-right: 60px;
+}
+
+.edit-back-btn {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  width: 20%;
+  text-decoration: none;
+  padding: 17px 80px;
+}

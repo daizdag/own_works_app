@@ -4,7 +4,7 @@
 
 /* 商品の概要 */
 
-.collection-show {
+.show-view {
   width: 70vw;
   padding: 60px 0;
   margin: 0 auto;
@@ -96,6 +96,11 @@
 .detail-collection {
   font-size: 14px;
   margin-top: 10px;
+}
+
+.collection-nickname {
+  border-bottom: 1px solid #f57a00;
+  color: #f57a00;
 }
 
 .detail-value {

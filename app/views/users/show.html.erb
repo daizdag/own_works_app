@@ -4,10 +4,7 @@
     <div class="user__wrapper">
       <div class="page-heading">
         <div class="page-heading-left">
-          <%= "#{current_user.nickname}"%><span>さんの情報</span>
-        </div>
-        <div class="page-heading-right">
-          <%= link_to "プロフィールを編集する", edit_profile_path, method: :get %>
+          <%= "#{@user.nickname}"%><span>さんの情報</span>
         </div>
       </div>
       <div class="profile-content">
@@ -15,39 +12,39 @@
           <tbody>
             <tr>
               <th class="table__col1">ユーザー名</th>
-              <td class="table__col2"><%= current_user.nickname %></td>
+              <td class="table__col2"><%= @user.nickname %></td>
             </tr>
             <tr>
               <th class="table__col1">年齢</th>
-              <% if current_user.age == nil %>
+              <% if @user.age == nil %>
                 <td class="table__col2">情報がありません</td>
               <% else %>
-                <td class="table__col2"><%= current_user.age %>歳</td>
+                <td class="table__col2"><%= @user.age %>歳</td>
               <% end %>
             </tr>
             <tr>
               <th class="table__col1">性別</th>
-              <% if current_user.gender_id == nil %>
+              <% if @user.gender_id == nil %>
                 <td class="table__col2">情報がありません</td>
-              <% elsif current_user.gender_id == 1 %>
+              <% elsif @user.gender_id == 1 %>
                 <td class="table__col2">情報がありません</td>
               <% else %>
-                <td class="table__col2"><%= current_user.gender.type %></td>
+                <td class="table__col2"><%= @user.gender.type %></td>
               <% end %>
             <tr>
               <th class="table__col3">自己紹介</th>
-              <% if current_user.introduction == '' %>
+              <% if @user.introduction == '' %>
                 <td class="table__col4-nil">情報がありません</td>
               <% else %>
-                <td class="table__col4"><%= current_user.introduction %></td>
+                <td class="table__col4"><%= @user.introduction %></td>
               <% end %>
         </table>
       </div>
     </div>
       <div class="user-collections">
-        <h2><span><%= "#{current_user.nickname}"%></span>さんの作品</h2>
+        <h2><span><%= "#{@user.nickname}"%></span>さんの作品</h2>
         <ul class='collection-lists'>
-        <% current_user.collections.each do |collection| %>
+        <% @user.collections.each do |collection| %>
           <li class='collection'>
             <%= link_to collection_path(collection.id) do %>
             <div class='collectionimg-content'>

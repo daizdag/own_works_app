@@ -1,0 +1,38 @@
+<%= render 'shared/header' %>
+<div class="main">
+  <div class="profile-view">
+    <div class="user__wrapper">
+      <div class="page-heading">
+        <div class="page-heading-left">
+          <%= "#{current_user.nickname}"%><span>さんの情報</span>
+        </div>
+      </div>
+      <%= form_with model: @user, url: profile_path, local: true do |f| %>
+      <%= render 'shared/error_messages', model: @user %>
+      <div class="profile-content">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th class="table__col1">ユーザー名</th>
+              <td class="table__col2"><%= f.text_field :nickname, class:"edit-nickname", placeholder:"例）創作太郎" %></td>
+            </tr>
+            <tr>
+              <th class="table__col1">年齢</th>
+              <td class="table__col2"><%= f.text_field :age, class:"edit-age", maxlength:"3" %>歳</td>
+            </tr>
+            <tr>
+              <th class="table__col1">性別</th>
+              <td class="table__col2"><%= f.collection_select(:gender_id, Gender.all, :id, :type, {}, {class:"edit-select-box"}) %></td>
+            <tr>
+              <th class="table__col3">自己紹介</th>
+              <td class="table__col4"><%= f.text_area :introduction, class:"edit-introduction" %></td>
+        </table>
+      </div>
+        <div class="edit-btn-contents">
+          <%= f.submit "編集する" ,class:"edit-profile-btn" %>
+          <%=link_to 'もどる', profile_path, class:"edit-back-btn" %>
+        </div>
+        <% end %>
+    </div>
+  </div>
+</div>

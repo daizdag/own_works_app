@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2023_03_03_053226) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "age"
-    t.integer "gender"
+    t.integer "gender_id"
     t.text "introduction"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

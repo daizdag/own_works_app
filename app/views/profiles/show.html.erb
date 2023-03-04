@@ -7,7 +7,7 @@
           <%= "#{current_user.nickname}"%><span>さんの情報</span>
         </div>
         <div class="page-heading-right">
-          <%= link_to "プロフィールを編集する", edit_profiles_path %>
+          <%= link_to "プロフィールを編集する", edit_profile_path(current_user.id), method: :get %>
         </div>
       </div>
       <div class="profile-content">
@@ -27,14 +27,14 @@
             </tr>
             <tr>
               <th class="table__col1">性別</th>
-              <% if current_user.gender == nil %>
+              <% if current_user.gender.id == 1 %>
                 <td class="table__col2">情報がありません</td>
               <% else %>
-                <td class="table__col2"><%= current_user.gender.name %></td>
+                <td class="table__col2"><%= current_user.gender.type %></td>
               <% end %>
             <tr>
               <th class="table__col3">自己紹介</th>
-              <% if current_user.introduction == nil %>
+              <% if current_user.introduction == '' %>
                 <td class="table__col4-nil">情報がありません</td>
               <% else %>
                 <td class="table__col4"><%= current_user.introduction %></td>

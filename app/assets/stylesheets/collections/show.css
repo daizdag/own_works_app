@@ -98,6 +98,11 @@
   margin-top: 10px;
 }
 
+.collection-nickname {
+  border-bottom: 1px solid #f57a00;
+  color: #f57a00;
+}
+
 .detail-value {
   width: 80vw;
   font-size: 14px;

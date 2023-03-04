@@ -73,11 +73,11 @@
               </div>
             <div class="collection-user">
             <% if  current_user == collection.user %>
-              <%= link_to  profile_path(@user) do %>
+              <%= link_to  profile_path(@user), class: "collection-nickname" do %>
                 <%= collection.user.nickname %>
               <% end %>
             <% else %>
-              <%= link_to user_path(collection.user) do %>
+              <%= link_to user_path(collection.user), class: "collection-nickname" do %>
                 <%= collection.user.nickname %>
               <% end %>
             <% end %>

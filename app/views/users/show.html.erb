@@ -24,17 +24,19 @@
             </tr>
             <tr>
               <th class="table__col1">性別</th>
-              <% if @user.gender == nil %>
+              <% if @user.gender_id == nil %>
+                <td class="table__col2">情報がありません</td>
+              <% elsif @user.gender_id == 1 %>
                 <td class="table__col2">情報がありません</td>
               <% else %>
-                <td class="table__col2"><%= @user.gender.name %></td>
+                <td class="table__col2"><%= @user.gender.type %></td>
               <% end %>
             <tr>
               <th class="table__col3">自己紹介</th>
-              <% if @user.introduction == nil %>
+              <% if @user.introduction == '' %>
                 <td class="table__col4-nil">情報がありません</td>
               <% else %>
-                <td class="table__col4"><%= current_use@userr.introduction %></td>
+                <td class="table__col4"><%= @user.introduction %></td>
               <% end %>
         </table>
       </div>

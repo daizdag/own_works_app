@@ -37,7 +37,7 @@ https://own-works.onrender.com
 
 # 実装した機能についての画像やGIF及びその説明
 ・トップページ<br>
-<a href="https://gyazo.com/ed74de54ed075a4e05f6a92d3237ee41"><img src="https://i.gyazo.com/ed74de54ed075a4e05f6a92d3237ee41.gif" alt="Image from Gyazo" width="1000"/></a><br><br>
+<br><br>
 
 ・作品詳細ページ<br>
 <a href="https://gyazo.com/1759bf0a5444b2651adcfe8c03615f77"><img src="https://i.gyazo.com/1759bf0a5444b2651adcfe8c03615f77.gif" alt="Image from Gyazo" width="1000"/></a><br><br>

@@ -78,7 +78,8 @@ th {
 .table__col4{
   font-size: 20px;
   padding: 5px;
-  word-break:break-all
+  word-break:break-all;
+  hyphens: auto;
 }
 
 .table__col4-nil{

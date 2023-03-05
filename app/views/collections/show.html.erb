@@ -7,9 +7,9 @@
       </div>
       <% if user_signed_in? %>
         <% if current_user == @collection.user %>
-          <div class="show-edit-btn">
+          <div class="collection-edit-btn">
             <button type="button" class="edit-btn" id="edit-lists">
-                <span data-component="text">Edit</span>
+                <span data-component="text">編集</span>
             </button>
             <ul class="show-edit-lists hidden" id="show-edit-list">
               <li class="edit-list"><%= link_to "編集", edit_collection_path, method: :get, class: "edit-action-btn" %></li>
@@ -38,14 +38,14 @@
       </div>
       <div class="right-content">
         <div class="collection-explain-box">
-          <span>こだわりポイント</span>
+          <span>こだわりポイント!</span>
           <div class="collection-point"><%= @collection.point %></div>
         </div>
         <div class="detail-table">
-              <div class="detail-collection">詳細説明<br>
+              <div class="detail-collection"><span>詳細説明</span><br>
                 <%= @collection.content %>
               </div>
-              <div class="detail-collection">出品者
+              <div class="detail-collection"><span>出品者</span>
                 <% if  current_user == @collection.user %>
                   <%= link_to  profile_path(@user), class: "collection-nickname" do %>
                     <%= @collection.user.nickname %>

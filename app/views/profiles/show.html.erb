@@ -38,6 +38,8 @@
               <th class="table__col3">自己紹介</th>
               <% if current_user.introduction == nil %>
                 <td class="table__col4-nil">情報がありません</td>
+              <% elsif current_user.introduction == '' %>
+                <td class="table__col4-nil">情報がありません</td>
               <% else %>
                 <td class="table__col4"><%= current_user.introduction %></td>
               <% end %>

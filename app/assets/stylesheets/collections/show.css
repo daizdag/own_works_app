@@ -24,8 +24,19 @@
   margin: 15px;
 }
 
+.collection-edit-btn {
+  width: 100px;
+}
+
+.edit-btn {
+  margin-top: 25px;
+  margin-left: 32px;
+  border: 1px solid;
+  border-radius: 2px;
+}
+
 .edit-list{
-  padding: 15px;
+  margin-top: 32px;
 }
 
 .edit-action-btn {
@@ -41,22 +52,12 @@
   background-color: #ea352d;
 }
 
-
-.edit-btn {
-  margin: 25px;
-  margin-right: 40px;
-}
-
 .collection-box {
   width: 60vw;
   padding: 5vh 5vw 10vh 5vw;
   display: flex;
   align-items: center;
   background-color: #FFF;
-}
-
-.edit-btn {
-  display: inline-block;
 }
 
 .left-content {
@@ -88,6 +89,10 @@
   font-size: 30px;
 }
 
+.collection-explain-box span {
+  color: #f57a00;
+}
+
 .collection-point{
   border-bottom: 1px solid #2d2d2d;
   
@@ -96,6 +101,10 @@
 .detail-collection {
   font-size: 14px;
   margin-top: 10px;
+}
+
+.detail-collection span {
+  font-size: 16px;
 }
 
 .collection-nickname {

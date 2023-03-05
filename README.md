@@ -26,13 +26,21 @@ https://own-works.onrender.com
 
 # アプリケーションを作成した背景
 近年YouTubeやTwitterなどの自分の趣味や特技を公開する場面が増えた中で<br>
- ・「YouTube」よりも簡単に自分のハンドメイドの趣味を公開したい。<br>
- ・「Twitter」よりも詳細に説明したい。<br>
+ ・動画投稿よりも簡単に自分のハンドメイドの趣味を公開したい。<br>
+ ・日常のつぶやきをしない事でより趣味を共有したい。<br>
  と考え画像専用のハンドメイド作品公開サイトを作りたいと考えました。
 
 # 洗い出した要件
-https://github.com/daizdag/own_works_app
+https://docs.google.com/spreadsheets/d/1RPlw3wkrM8EnDjOXHErvaWsXLhhz1fW55DysEeDEYRk/edit#gid=982722306
 # 実装した機能についての画像やGIF及びその説明
+・トップページ<br>
+<a href="https://gyazo.com/ed74de54ed075a4e05f6a92d3237ee41"><img src="https://i.gyazo.com/ed74de54ed075a4e05f6a92d3237ee41.gif" alt="Image from Gyazo" width="1000"/></a><br><br>
+
+・作品詳細ページ<br>
+<a href="https://gyazo.com/1759bf0a5444b2651adcfe8c03615f77"><img src="https://i.gyazo.com/1759bf0a5444b2651adcfe8c03615f77.gif" alt="Image from Gyazo" width="1000"/></a><br><br>
+
+・マイページ<br>
+<a href="https://gyazo.com/f474351e238f8299ee9785c190add5b0"><img src="https://i.gyazo.com/f474351e238f8299ee9785c190add5b0.png" alt="Image from Gyazo" width="1337"/></a>
 
 
 # 実装予定の機能
@@ -42,15 +50,18 @@ https://github.com/daizdag/own_works_app
 ・カテゴリー別検索機能<br>
 
 # データベース設計
-https://user-images.githubusercontent.com/115800558/222878759-247e533a-a415-4327-84f1-039674e6e1ed.png
+<a href="https://gyazo.com/f8d4e7399e9a9f13c39ff174df2026f6"><img src="https://i.gyazo.com/f8d4e7399e9a9f13c39ff174df2026f6.png" alt="Image from Gyazo" width="736"/></a>
+
 # 画面遷移図
-https://user-images.githubusercontent.com/115800558/220937602-e6434939-bffa-42a8-acd5-83be9bdac82a.png
+<a href="https://gyazo.com/1f9ed565a70716a8c00486597fc8a94d"><img src="https://i.gyazo.com/1f9ed565a70716a8c00486597fc8a94d.png" alt="Image from Gyazo" width="819"/></a>
+
 # 開発環境
 ・フロントエンド<br>
 ・バックエンド<br>
 ・インフラ<br>
 ・テキストエディタ<br>
 ・タスク管理<br>
+
 # ローカルでの動作環境
 以下のコマンドを順に実行。<br>
 % cd ダウンロード先のファイル名<br>
@@ -60,3 +71,6 @@ https://user-images.githubusercontent.com/115800558/220937602-e6434939-bffa-42a8
 % yarn install
 
 # 工夫したポイント
+・出来るだけ操作がわかるようにそれぞれの項目を大きくシンプルに表示させるように工夫しました。<br>
+・ユーザーマイページに遷移する際、ユーザーネームをクリックしJavaScriptでリストボタンを表示させそのリストボタンをクリックすると画面遷移が出来る事<br>
+<a href="https://gyazo.com/202b3b5d4b41032caad0ae85862042f7"><img src="https://i.gyazo.com/202b3b5d4b41032caad0ae85862042f7.gif" alt="Image from Gyazo" width="1000"/></a>

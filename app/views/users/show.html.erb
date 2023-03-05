@@ -33,7 +33,7 @@
               <% end %>
             <tr>
               <th class="table__col3">自己紹介</th>
-              <% if @user.introduction == '' %>
+              <% if @user.introduction == nil %>
                 <td class="table__col4-nil">情報がありません</td>
               <% else %>
                 <td class="table__col4"><%= @user.introduction %></td>

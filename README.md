@@ -31,7 +31,10 @@ https://own-works.onrender.com
  と考え画像専用のハンドメイド作品公開サイトを作りたいと考えました。
 
 # 洗い出した要件
-https://docs.google.com/spreadsheets/d/1RPlw3wkrM8EnDjOXHErvaWsXLhhz1fW55DysEeDEYRk/edit#gid=982722306
+
+[要件定義シートへ](https://docs.google.com/spreadsheets/d/1RPlw3wkrM8EnDjOXHErvaWsXLhhz1fW55DysEeDEYRk/edit#gid=982722306)
+
+
 # 実装した機能についての画像やGIF及びその説明
 ・トップページ<br>
 <a href="https://gyazo.com/ed74de54ed075a4e05f6a92d3237ee41"><img src="https://i.gyazo.com/ed74de54ed075a4e05f6a92d3237ee41.gif" alt="Image from Gyazo" width="1000"/></a><br><br>

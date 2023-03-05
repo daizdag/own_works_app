@@ -75,5 +75,5 @@ https://own-works.onrender.com
 
 # 工夫したポイント
 ・出来るだけ操作がわかるようにそれぞれの項目を大きくシンプルに表示させるように工夫しました。<br>
-・ユーザーマイページに遷移する際、ユーザーネームをクリックしJavaScriptでリストボタンを表示させそのリストボタンをクリックすると画面遷移が出来る事<br>
+・ユーザーマイページに遷移する際、ユーザーネームをクリックしJavaScriptでリストボタンを表示させそのリストボタンをクリックすると画面遷移が出来るようにしました。<br>
 <a href="https://gyazo.com/202b3b5d4b41032caad0ae85862042f7"><img src="https://i.gyazo.com/202b3b5d4b41032caad0ae85862042f7.gif" alt="Image from Gyazo" width="1000"/></a>

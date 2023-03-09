@@ -1,12 +1,12 @@
 class DonationsController < ApplicationController
 
   def new
+    @user = User.find(params[:user_id])
     @donation = Donation.new
   end
 
   def create
     @donation = Donation.new(donation_params)
-    binding.pry
     if @donation.valid?
       pay_item
       @donation.save
@@ -19,7 +19,7 @@ class DonationsController < ApplicationController
   private
 
   def donation_params
-    params.require(:donation).permit(:price, :text).merge(token: params[:token])
+    params.require(:donation).permit(:price, :text).merge(user_id: current_user.id,token: params[:token])
   end
 
   def pay_item

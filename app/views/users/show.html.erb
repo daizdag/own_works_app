@@ -35,10 +35,23 @@
               <th class="table__col3">自己紹介</th>
               <% if @user.introduction == nil %>
                 <td class="table__col4-nil">情報がありません</td>
+              <% elsif @user.introduction == '' %>
+                <td class="table__col4-nil">情報がありません</td>
               <% else %>
                 <td class="table__col4"><%= @user.introduction %></td>
               <% end %>
         </table>
+      </div>
+    </div>
+    <div class="donation">
+      <div class="donation-img"></div>
+      <div class="donation-inner">
+        <div class="donation-link-text">
+          <span><%= @user.nickname %></span>さん<br>を支援して応援をしよう！
+        </div>
+        <div class="donation-link">
+          <%= link_to "応援する！", new_user_donation_path(@user), class: 'donation-btn' %>
+        </div>
       </div>
     </div>
       <div class="user-collections">

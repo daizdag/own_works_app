@@ -31,6 +31,7 @@
               <% else %>
                 <td class="table__col2"><%= @user.gender.type %></td>
               <% end %>
+            </tr>
             <tr>
               <th class="table__col3">自己紹介</th>
               <% if @user.introduction == nil %>
@@ -40,6 +41,8 @@
               <% else %>
                 <td class="table__col4"><%= @user.introduction %></td>
               <% end %>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>

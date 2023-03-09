@@ -1,5 +1,7 @@
 /* user/show.cssはprofile/show.cssに記載 */
 
+/* 寄付機能へのフォーム */
+
 .donation {
   width: 90%;
   background-color: #fff;
@@ -32,3 +34,5 @@
   color: #fff;
   background-color: #f57a00;
 }
+
+/* //寄付機能へのフォーム */

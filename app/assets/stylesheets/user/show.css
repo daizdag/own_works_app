@@ -7,10 +7,6 @@
   background-color: #fff;
 }
 
-.donation-img {
-  background-image: image-url('045.jpg');
-}
-
 .donation-inner {
   height: 300px;
   display: flex;
@@ -27,7 +23,7 @@
   color: #f57a00;
 }
 
-.donation-btn {
+.donation-link-btn {
   padding: 60px 80px;
   border-radius: 10px;
   font-size: 40px;

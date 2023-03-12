@@ -1,0 +1,32 @@
+.contents-row {
+  width: 70%;
+  margin: 60px auto;
+  background-color: #fff;
+}
+
+.success {
+  height: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.success-text h1 {
+  font-size: 72px;
+  color: #f57a00;
+}
+
+.success-text p {
+  font-size: 24px;
+  margin-bottom: 100px;
+}
+
+.create-back-btn {
+  width: 20%;
+  height: 20px;
+  padding: 17px 50px;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #aaa;
+  color: #fff;
+  background-color: #aaa;
+}

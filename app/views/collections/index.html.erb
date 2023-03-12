@@ -1,5 +1,6 @@
 <%= render 'shared/header' %>
   <div class="main">
+  <%# トップヘッダー %>
   <% if user_signed_in? %>
     <div class='title-contents'>
       <h2 class='service-title'>
@@ -15,7 +16,7 @@
     <% if current_user.collections == [] %>
       <div class="welcome-create">
         <p>さあ！自分の作品を登録しよう！</p>
-        <%= link_to "投稿はこちら！", new_collection_path, class: 'welcome-create-btn'%>
+        <%= link_to "投稿する！", new_collection_path, class: 'welcome-create-btn'%>
       </div>
     <% end %> 
     <%= link_to(new_collection_path, class: 'purchase-btn') do %>
@@ -35,6 +36,9 @@
       <%= link_to "登録はこちら！", new_user_registration_path, class: 'welcome-new-btn' %>
     </div>
   <% end %>
+  <%# /トップヘッダー %>
+
+  <%# お知らせ %>
   <h1 class="notification">お知らせ</h1>
   <div class="announcement-notice">
     <ul class="announcement-notice_list">
@@ -56,6 +60,9 @@
       </li>
     </ul>
   </div>
+  <%# /お知らせ %>
+  
+  <%# 作品一覧 %>
   <div class='collection-contents'>
     <h2 class='title'>ピックアップカテゴリー</h2>
     <div class="subtitle" >
@@ -93,4 +100,5 @@
       <% end %>
     </ul>
   </div>
+  <%# /作品一覧 %>
 </div>

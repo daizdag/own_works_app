@@ -23,8 +23,8 @@
             <tr>
               <th class="table__col1">性別</th>
               <td class="table__col2"><%= f.collection_select(:gender_id, Gender.all, :id, :type, {}, {class:"edit-select-box"}) %></td>
-            <tr>
             </tr>
+            <tr>
               <th class="table__col3">自己紹介</th>
               <td class="table__col4"><%= f.text_area :introduction, class:"edit-introduction" %></td>
             </tr>

@@ -1,30 +1,35 @@
 <%= render "shared/second-header"%>
 <div class="main">
-  <div class="donation">
-    <div class="donation-inner">
-      <div class="donation-link-text">
+  <div class="donation-header">
+    <div class="donation-header-text">
         <span><%= @user.nickname %></span>さん<br>を支援して応援をしよう！
-      </div>
     </div>
   </div>
   <%= form_with  model: @donation, url: user_donations_path,id: 'charge-form', class: 'registration-main',local: true do |f| %>
   <%= render 'shared/error_messages', model: @donation %>
-  <div class='form-wrap'>
-
+  <div class='donation-form-wrap'>
     <div class="form-group">
       <div class='form-text-wrap'>
-        <label class="form-text">応援メッセージ</label>
+        <label class="weight-bold-text">応援メッセージ</label>
+        <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :text, class:"price", placeholder:"例)2000" %>
+      <%= f.text_area :text, class:"support-message", placeholder:"例)いつも応援してます！" %>
     </div>
     <div class="form-group">
       <div class='form-text-wrap'>
-        <label class="form-text">金額</label>
+        <label class="weight-bold-text">金額</label>
+        <span class="indispensable">必須</span>
       </div>
-      <%= f.text_field :price, class:"price", placeholder:"例)2000" %>
+      <div class="price-form">
+        <%= f.text_field :price, class:"price", placeholder:"例)2000" %>円
+      </div>
+      <div class="price-caution">
+        <p>※クレジットカードでの応援のみとなります。</p>
+      </div>
     </div>
 
     <div class="card-form">
+      <div class="card-top">クレジットカード情報</div>
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">カード番号</label>
@@ -43,11 +48,11 @@
         </div>
         <div id="cvc-form" class="input-default"></div>
       </div>
-      <div class="form-group">
-      <%= f.submit "購入", class:"button", id: "button" %>
-      <%=link_to 'もどる', root_path, class:"edit-back-btn" %>
-      </div>
     </div>
+      <div class="donation-btns">
+        <%= f.submit "応援メッセージを送る!", class:"donation-btn", id: "button" %>
+        <%=link_to 'もどる', root_path, class:"donation-back-btn" %>
+      </div>
   </div>
   <% end %>
 </div>

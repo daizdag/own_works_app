@@ -22,7 +22,8 @@
         </div>
       </div>
       <%# /作品画像 %>
-      <%# 作品名と作品説明 %>
+
+      <%# 作品の詳細 %>
       <div class="new-collections">
         <div class="weight-bold-text">
           作品名
@@ -41,8 +42,6 @@
           <%= f.text_area :content, class:"collections-text", id:"collection-info", placeholder:"作品の魅力や工夫した箇所（1,000文字まで）", maxlength:"1000" %>
         </div>
       </div>
-      <%# /作品名と作品説明 %>
-      <%# 商品の詳細 %>
       <div class="collection-detail">
         <div class="form">
           <div class="weight-bold-text">
@@ -51,12 +50,24 @@
           </div>
           <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
         </div>
-        <%# 下部ボタン %>
+      <%# /作品の詳細 %>
+
+      <%# 注意ボタン %>
+        <div class="caution">
+          <p class="sentence">
+            <a href="#">禁止されている投稿、</a>
+            <a href="#">行為</a>
+              を必ずご確認ください。
+          </p>
+        </div>
+      <%# /注意ボタン %>
+
+      <%# 下部ボタン %>
         <div class="sell-btn-contents">
           <%= f.submit "変更する" , class:"sell-btn" %>
           <%=link_to 'もどる', collection_path, class:"back-btn" %>
         </div>
-        <%# /下部ボタン %>
+      <%# /下部ボタン %>
       </div>
       <% end %>
     </div>

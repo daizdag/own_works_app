@@ -1,5 +1,6 @@
 <%= render 'shared/header' %>
 <div class="main">
+  <%# 作品の概要 %>
   <div class="show-view">
     <div class="show-upper-var">
       <div class="show-title">
@@ -69,8 +70,10 @@
       <div class="report-btn">
         <%= link_to "不適切な商品の通報", '#' %>
       </div>
-    </div>  
+    </div>
+  <%# /作品の概要 %>
 
+  <%# コメントリスト %>  
     <div class="comments" id="comments">
       <h2 class="comment-list">みんなのコメント</h2>
         <% @collection.comments.each do |comment| %>
@@ -91,7 +94,9 @@
           </div>
         <% end %>
     </div>
+  <%# /コメントリスト %>
 
+  <%# コメントフォーム %>
     <div class="comment-form">
       <div class="comment-box">
         <% if user_signed_in? %>
@@ -108,4 +113,5 @@
       </div>
     </div>
   </div>
+  <%# /コメントフォーム %>
 </div>

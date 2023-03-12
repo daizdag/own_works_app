@@ -10,7 +10,6 @@ class DonationsController < ApplicationController
     if @donation.valid?
       pay_item
       @donation.save
-      return redirect_to root_path
     else
       render 'new'
     end

@@ -23,7 +23,7 @@ if(location.pathname.match(/\/collections\/\d/)){
         <div class="comment-text">
         <p>${data.comment.text}</p>
       </div>
-      <a class="comment-delete-btn" data-method="delete" href="/collections/${data.comment.collection}/comments/${data.comment.id}">削除</a>
+      <a class="comment-delete-btn" data-method="delete" href="/collections/${data.comment.collection_id}/comments/${data.comment.id}">削除</a>
     </div>
   </div>`
     const comments = document.getElementById("comments")

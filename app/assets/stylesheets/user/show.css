@@ -1,12 +1,10 @@
 /* user/show.cssはprofile/show.cssに記載 */
 
+/* 寄付機能へのフォーム */
+
 .donation {
   width: 90%;
   background-color: #fff;
-}
-
-.donation-img {
-  background-image: image-url('045.jpg');
 }
 
 .donation-inner {
@@ -25,10 +23,12 @@
   color: #f57a00;
 }
 
-.donation-btn {
+.donation-link-btn {
   padding: 60px 80px;
   border-radius: 10px;
   font-size: 40px;
   color: #fff;
   background-color: #f57a00;
 }
+
+/* //寄付機能へのフォーム */

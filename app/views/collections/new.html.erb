@@ -18,11 +18,12 @@
           <p>
             クリックしてファイルをアップロード
           </p>
-          <%= f.file_field :images, name: 'collection[images][]', data: {index: 0} %>
+          <%= f.file_field :images, class:'image-btn', name: 'collection[images][]', data: {index: 0} %>
         </div>
       </div>
       <%# /作品画像 %>
-      <%# 作品名と作品説明 %>
+      
+      <%# 作品説明 %>
       <div class="new-collections">
         <div class="weight-bold-text">
           作品名
@@ -41,8 +42,6 @@
           <%= f.text_area :content, class:"collections-text", id:"collection-info", placeholder:"作品の魅力や工夫した箇所（1,000文字まで）", maxlength:"1000" %>
         </div>
       </div>
-      <%# /作品名と作品説明 %>
-      <%# 商品の詳細 %>
       <div class="collection-detail">
         <div class="form">
           <div class="weight-bold-text">
@@ -51,12 +50,24 @@
           </div>
           <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box"}) %>
         </div>
-        <%# 下部ボタン %>
+      <%# /作品説明 %>
+
+      <%# 注意ボタン %>
+        <div class="caution">
+          <p class="sentence">
+            <a href="#">禁止されている投稿、</a>
+            <a href="#">行為</a>
+              を必ずご確認ください。
+          </p>
+        </div>
+      <%# /注意ボタン %>
+
+      <%# 下部ボタン %>
         <div class="sell-btn-contents">
           <%= f.submit "投稿する" ,class:"sell-btn" %>
           <%=link_to 'もどる', root_path, class:"back-btn" %>
         </div>
-        <%# /下部ボタン %>
+      <%# /下部ボタン %>
       </div>
       <% end %>
     </div>

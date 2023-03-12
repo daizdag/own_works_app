@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function(){
   const buildNewFileField = () => {
     // 2枚目用のfile_fieldを作成
     const newFileField = document.createElement('input');
+    newFileField.setAttribute('class', 'image-btn');
     newFileField.setAttribute('type', 'file');
     newFileField.setAttribute('name', 'collection[images][]');
 
@@ -100,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function(){
   };
 
   // input要素を取得
-  const fileField = document.querySelector('input[type="file"][name="collection[images][]"]');
+  const fileField = document.querySelector('input[class="image-btn"][type="file"][name="collection[images][]"]');
 
   // input要素で値の変化が起きた際に呼び出される関数
   fileField.addEventListener('change', changedFileField);

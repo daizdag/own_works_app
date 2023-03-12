@@ -31,6 +31,7 @@
               <% else %>
                 <td class="table__col2"><%= @user.gender.type %></td>
               <% end %>
+            </tr>
             <tr>
               <th class="table__col3">自己紹介</th>
               <% if @user.introduction == nil %>
@@ -40,6 +41,8 @@
               <% else %>
                 <td class="table__col4"><%= @user.introduction %></td>
               <% end %>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>
@@ -50,7 +53,7 @@
           <span><%= @user.nickname %></span>さん<br>を支援して応援をしよう！
         </div>
         <div class="donation-link">
-          <%= link_to "応援する！", new_user_donation_path(@user), class: 'donation-btn' %>
+          <%= link_to "応援する！", new_user_donation_path(@user), class: 'donation-link-btn' %>
         </div>
       </div>
     </div>

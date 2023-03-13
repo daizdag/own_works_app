@@ -34,7 +34,7 @@
           <%end%>
         </div>
         <div class="favorite-count">
-        <span>お気に入り 0</span>
+        <span>お気に入り<%= Favorite.count_by_collection(@collection.id) %></span>
       </div>
       </div>
       <div class="right-content">
@@ -63,20 +63,20 @@
         </div>
       </div>
     </div> 
-    <div class="option">
-      <div class="favorite-btn">
-        <% if current_user != @collection.user %>
-          <% if current_user.favorite_find(@collection) %>
-            <%= link_to 'お気に入りからはずす', collection_favorites_path(@collection), method: :delete %>
-          <% else %>
-            <%= link_to 'お気に入り登録する', collection_favorites_path(@collection), method: :post %>
-          <% end %>
-        <% end %>
+    <% if current_user != @collection.user %>
+      <div class="option">
+        <div class="favorite-btn">
+            <% if current_user.favorite_find(@collection) %>
+              <%= link_to 'お気に入りからはずす', collection_favorites_path(@collection), method: :delete %>
+            <% else %>
+              <%= link_to 'お気に入り登録する', collection_favorites_path(@collection), method: :post %>
+            <% end %>
+        </div>
+        <div class="report-btn">
+          <%= link_to "不適切な商品の通報", '#' %>
+        </div>
       </div>
-      <div class="report-btn">
-        <%= link_to "不適切な商品の通報", '#' %>
-      </div>
-    </div>
+    <% end %>
   <%# /作品の概要 %>
 
   <%# コメントリスト %>  

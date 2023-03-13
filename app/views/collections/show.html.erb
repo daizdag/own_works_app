@@ -65,7 +65,13 @@
     </div> 
     <div class="option">
       <div class="favorite-btn">
-        <%= link_to "お気に入り登録", '#' %> 
+        <% if current_user != @collection.user %>
+          <% if current_user.favorite_find(@collection) %>
+            <%= link_to 'お気に入りからはずす', collection_favorites_path(@collection), method: :delete %>
+          <% else %>
+            <%= link_to 'お気に入り登録する', collection_favorites_path(@collection), method: :post %>
+          <% end %>
+        <% end %>
       </div>
       <div class="report-btn">
         <%= link_to "不適切な商品の通報", '#' %>
@@ -85,7 +91,7 @@
               <div class="comment-text">
                 <p><%= comment.text%></p>
               </div>
-              <% if current_user.id == comment.user_id %>
+              <% if current_user == comment.user_id %>
                 <%= link_to "削除", collection_comment_path(@collection, comment), method: :delete, class: "comment-delete-btn", id: "comment-delete" %>
               <% elsif user_signed_in? && current_user.id == @collection.user_id %>
                 <%= link_to "削除", collection_comment_path(@collection, comment), method: :delete, class: "comment-delete-btn", id: "comment-delete" %>

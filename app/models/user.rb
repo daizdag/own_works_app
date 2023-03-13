@@ -12,5 +12,10 @@ class User < ApplicationRecord
 
   has_many :collections
   has_many :comments
+  has_many :favorites, dependent: :destroy
   belongs_to :gender
+
+  def favorite_find(collection_id)
+    favorites.where(collection_id: collection_id).exists?
+  end
 end

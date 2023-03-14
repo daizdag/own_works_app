@@ -1,51 +1,5 @@
 <%= render 'shared/header' %>
 <div class="main">
-  <div class="profile-view">
-    <div class="user__wrapper">
-      <div class="page-heading">
-        <div class="page-heading-left">
-          <%= "#{@user.nickname}"%><span>さんの情報</span>
-        </div>
-      </div>
-      <div class="profile-content">
-        <table class="table">
-          <tbody>
-            <tr>
-              <th class="table__col1">ユーザー名</th>
-              <td class="table__col2"><%= @user.nickname %></td>
-            </tr>
-            <tr>
-              <th class="table__col1">年齢</th>
-              <% if @user.age == nil %>
-                <td class="table__col2">情報がありません</td>
-              <% else %>
-                <td class="table__col2"><%= @user.age %>歳</td>
-              <% end %>
-            </tr>
-            <tr>
-              <th class="table__col1">性別</th>
-              <% if @user.gender_id == nil %>
-                <td class="table__col2">情報がありません</td>
-              <% elsif @user.gender_id == 1 %>
-                <td class="table__col2">情報がありません</td>
-              <% else %>
-                <td class="table__col2"><%= @user.gender.type %></td>
-              <% end %>
-            </tr>
-            <tr>
-              <th class="table__col3">自己紹介</th>
-              <% if @user.introduction == nil %>
-                <td class="table__col4-nil">情報がありません</td>
-              <% elsif @user.introduction == '' %>
-                <td class="table__col4-nil">情報がありません</td>
-              <% else %>
-                <td class="table__col4"><%= @user.introduction %></td>
-              <% end %>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
     <div class="donation">
       <div class="donation-img"></div>
       <div class="donation-inner">
@@ -57,30 +11,35 @@
         </div>
       </div>
     </div>
-      <div class="user-collections">
-        <h2><span><%= "#{@user.nickname}"%></span>さんの作品</h2>
-        <ul class='collection-lists'>
-        <% @user.collections.each do |collection| %>
-          <li class='collection'>
-            <%= link_to collection_path(collection.id) do %>
-            <div class='collectionimg-content'>
-              <%= image_tag collection.images[0], class: "collection-img" if collection.images.attached? %>
-            </div>
-            <div class='collection-info'>
-              <h3 class='collection-title'>
-                <%= collection.title %>
-              </h3>
-                <div class='star-btn'>
-                  <%= image_tag "star.png", class:"star-icon" %>
-                  <span class='star-count'>0</span>
-                </div>
-              <div class="collection-user">
-              </div>
-            </div>
-            <% end %>
-          </li>
-        <% end %>
-        </ul>
+    <div class="user__wrapper">
+      <div class="page-heading">
+        <div class="page-heading-left">
+          <%= "#{@user.nickname}"%><span>さんの情報</span>
+        </div>
+      </div>
+      <!--タブ部分-->
+      <ul class="tab-list list-unstyled">
+        <li class="tab tab-active">
+          投稿作品
+        </li>
+        <li class="tab">
+          いいねした作品
+        </li>
+        <li class="tab">
+          ユーザー情報
+        </li>
+      </ul>
+      <!--タブで選択された要素部分-->
+      <div class="tabbox-contents">
+        <div class="tabbox box-show">
+          <%= render 'users/collection-show' %>    
+        </div>
+        <div class="tabbox">
+          <%= render 'users/favorite' %>
+        </div>
+        <div class="tabbox">
+          <%= render 'users/profile' %>
+        </div>
       </div>
     </div>
   </div>

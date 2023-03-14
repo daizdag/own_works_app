@@ -2,6 +2,10 @@ class FavoritesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_collection, only: [:create, :destroy]
 
+  def show 
+    @collections = Collection.all
+  end
+
   def create
     Favorite.create(user_id: current_user.id, collection_id: params[:collection_id])
     redirect_to collection_path(@collection)

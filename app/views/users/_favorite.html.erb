@@ -1,0 +1,5 @@
+<div class="favorite-view">
+  <% @user.favorites.each do |favorite| %>
+    <%= link_to favorite.collection, collection_path(favorite.collection) %><br>
+  <% end %>
+</div>

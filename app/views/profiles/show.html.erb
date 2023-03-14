@@ -74,6 +74,35 @@
         <% end %>
         </ul>
       </div>
+      <div class="favorite-view">
+        <ul class='collection-lists'>
+        <% current_user.favorites.each do |favorite| %>
+          <li class='collection'>
+            <%= link_to collection_path(favorite.collection) do %>
+            <div class='collectionimg-content'>
+              <%= image_tag favorite.collection.images[0], class: "collection-img" if favorite.collection.images.attached? %>
+            </div>
+            <div class='collection-info'>
+              <h3 class='collection-title'>
+                <%= favorite.collection.title %>
+              </h3>
+              <div class="collection-user">
+              <% if  current_user == favorite.user %>
+                <%= link_to  profile_path(@user), class: "collection-nickname" do %>
+                  <%= favorite.collection.user.nickname %>
+                <% end %>
+              <% else %>
+                <%= link_to user_path(favorite.user), class: "collection-nickname" do %>
+                  <%= favorite.collection.user.nickname %>
+                <% end %>
+              <% end %>
+              </div>
+            </div>
+            <% end %>
+          </li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

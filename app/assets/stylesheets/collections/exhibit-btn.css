@@ -8,6 +8,7 @@
   text-align: center;
   border: 1px solid #fff;
   background: #f57a00;
+  z-index: 10000;
 }
 
 .purchase-btn-text {

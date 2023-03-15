@@ -19,15 +19,14 @@
 
 .edit-btn-contents {
   margin: 50px 0;
-  width: 65%;
-  text-align: center;
+  text-align: left;
 }
 
 .edit-profile-btn {
   background: #ea352d;
   border: 1px solid #ea352d;
   color: #fff;
-  width: 50%;
+  width: 40%;
   height: 50px;
   font-size: 14px;
   margin-right: 60px;

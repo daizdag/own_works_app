@@ -5,6 +5,21 @@
         <%= link_to root_path, class: :app_title do %>
           クリ<span class="kore">コレ！</span>
         <% end %>
+      </div><div class="header-right">
+        <% if user_signed_in? %>
+          <div class="nav__right">
+            <div class="user_nickname" id="lists"><%= current_user.nickname %></div>
+              <ul class="user-menu-wrapper hidden" id="user-menu-list">
+                <li class="user-menu-list"><%= link_to "マイページ", profile_path(@user), class: :my_page_link %></li>
+                <li class="user-menu-list"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %></li>
+              </ul>
+          </div>
+        <% else %>
+          <div class="nav__right">
+            <%= link_to "ログイン", new_user_session_path, class: :nav__btn %>
+            <%= link_to "アカウント登録", new_user_registration_path, class: :nav__btn %>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

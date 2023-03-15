@@ -1,0 +1,114 @@
+/* プロフィール情報 */
+
+.profile-view {
+  margin: 10px ;
+}
+
+.profile-content {
+  width: 600px;
+  margin-bottom: 60px;
+}
+
+.profile-content p {
+  font-size: 28px;
+}
+
+.profile-content span {
+  font-size: 36px;
+  color: #f57a00;
+}
+
+tr {
+  border: 1px solid;
+}
+
+th {
+  background-color: #f57a00;
+  color: #FFF;
+}
+
+.table__col1 {
+  width: 30%;
+  padding: 5px;
+  border-right: 1px solid black;
+  font-size: 26px;
+}
+
+.table__col2 {
+  width: 400px;
+  padding-left: 10px;
+  font-size: 24px;
+}
+
+.table__col3 {
+  width: 200px;
+  padding: 5px 5px 160px;
+  border-right: 1px solid black;
+  font-size: 26px;
+}
+
+.table__col4{
+  padding: 5px;
+  font-size: 20px;
+  word-break:break-all;
+  overflow: scroll;
+  hyphens: auto;
+}
+
+.table__col4-nil{
+  padding: 10px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 24px;
+}
+
+/* //プロフィール情報 */
+
+/* 寄付機能へのフォーム */
+
+.donation {
+  margin: 0 auto;
+  width: 90%;
+  background-color: #fff;
+}
+
+.donation-inner {
+  height: 250px;
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #f57a00;
+}
+
+.donation-link-text {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.donation-link-text span {
+  font-size: 48px;
+  color: #f57a00;
+}
+
+.donation-link-btn {
+  width: 150px;
+  height: 150px;
+  border-radius: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  font-size: 24px;
+  color:  #fff;
+  background-color: #f57a00;
+  transition: 0.4s ease;
+}
+
+.donation-link-btn:hover{
+  border: 1px solid #f57a00;
+  color: #f57a00;
+  background-color: #fff;
+}
+
+/* //寄付機能へのフォーム */

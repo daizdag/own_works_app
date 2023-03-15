@@ -3,6 +3,7 @@ class Collection < ApplicationRecord
   belongs_to :user
   belongs_to :category
   has_many :comments
+  has_many :favorites, dependent: :destroy 
   has_many_attached :images
 
   with_options presence: true do

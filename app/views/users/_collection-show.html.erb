@@ -1,0 +1,23 @@
+<div class="user-collection-show">
+  <h2><span><%= "#{@user.nickname}"%></span>さんの作品</h2>
+  <div class='user-collection-lists'>
+    <% @user.collections.each do |collection| %>
+      <div class="user-collections">
+        <div class="user-collections-left">
+          <%= link_to collection_path(collection.id) do %>
+            <%= image_tag collection.images[0], class: "user-collection-img" if collection.images.attached? %>
+          <% end %>
+          <div class='user-collection-info'>
+            <%= link_to collection_path(collection.id), class: "user-collection-title" do %>
+              <%= collection.title %>
+            <% end %>
+          </div>
+        </div>
+        <div class='user-collections-right'>
+          <%= image_tag "star.png", class:"user-star-icon" %>
+          <span class='user-star-count'><%= Favorite.count_by_collection(collection.id) %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

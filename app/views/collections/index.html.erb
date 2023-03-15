@@ -33,7 +33,7 @@
       <p class='service-explain'>
         アカウントを登録して創作物を投稿しよう！
       </p>
-      <%= link_to "登録はこちら！", new_user_registration_path, class: 'welcome-new-btn' %>
+      <%= link_to "登録はこちら！", new_user_registration_path, class: 'welcome-new-user-btn' %>
     </div>
   <% end %>
   <%# /トップヘッダー %>
@@ -81,7 +81,7 @@
             </h3>
               <div class='star-btn'>
                 <%= image_tag "star.png", class:"star-icon" %>
-                <span class='star-count'>0</span>
+                <span class='star-count'><%= Favorite.count_by_collection(collection.id) %></span>
               </div>
             <div class="collection-user">
             <% if  current_user == collection.user %>

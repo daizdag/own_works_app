@@ -1,0 +1,54 @@
+<div class="profile-view">
+  <div class="profile-content">
+    <span><%= "#{@user.nickname}"%></span>さんのプロフィール
+    <table class="table">
+      <tbody>
+        <tr>
+          <th class="table__col1">ユーザー名</th>
+          <td class="table__col2"><%= @user.nickname %></td>
+        </tr>
+        <tr>
+          <th class="table__col1">年齢</th>
+          <% if @user.age == nil %>
+            <td class="table__col2">情報がありません</td>
+          <% else %>
+            <td class="table__col2"><%= @user.age %>歳</td>
+          <% end %>
+        </tr>
+        <tr>
+          <th class="table__col1">性別</th>
+          <% if @user.gender_id == nil %>
+            <td class="table__col2">情報がありません</td>
+          <% elsif @user.gender_id == 1 %>
+            <td class="table__col2">情報がありません</td>
+          <% else %>
+            <td class="table__col2"><%= @user.gender.type %></td>
+          <% end %>
+        </tr>
+        <tr>
+          <th class="table__col3">自己紹介</th>
+          <% if @user.introduction == nil %>
+            <td class="table__col4-nil">情報がありません</td>
+          <% elsif @user.introduction == '' %>
+            <td class="table__col4-nil">情報がありません</td>
+          <% else %>
+            <td class="table__col4"><%= @user.introduction %></td>
+          <% end %>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<% if current_user != @user %>
+  <div class="donation">
+    <div class="donation-img"></div>
+    <div class="donation-inner">
+      <div class="donation-link-text">
+        <span><%= @user.nickname %></span>さん<br>を支援して応援をしよう！
+      </div>
+      <div class="donation-link">
+        <%= link_to "応援する！", new_user_donation_path(@user), class: 'donation-link-btn' %>
+      </div>
+    </div>
+  </div>
+<% end%>

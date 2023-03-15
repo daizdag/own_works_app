@@ -1,34 +1,72 @@
-/* user/show.cssはprofile/show.cssに記載 */
-
-/* 寄付機能へのフォーム */
-
-.donation {
-  width: 90%;
-  background-color: #fff;
-}
-
-.donation-inner {
-  height: 300px;
+.user-show-page {
+  margin: 60px 0;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.donation-link-text {
-  font-size: 40px;
+.tab-list {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: solid 1px #CCC;
+
 }
 
-.donation-link-text span {
-  font-size: 48px;
+.tab {
+  width: calc(100% /6);
+  padding: 10px;
+  cursor: pointer;
+  border-left: solid 1px #CCC;
+  text-align: center;
+}
+
+.tab:first-child {
+  border-left: none;
+}
+
+.tab-active {
+  border-bottom: solid 3px #f57a00;
+}
+
+.tabbox {
+  height: 800px;
+  display: none;
+  padding: 15px;
+}
+
+.box-show {
+  display: block;
+}
+
+.tab:hover{
+  box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(-1px);
+}
+
+.user__wrapper {
+  width: 70vw;
+  min-width: 450px;
+  padding: 30px;
+  background-color: #FFF;
+}
+
+.page-heading {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-show-name {
+  font-size: 32px;
   color: #f57a00;
 }
 
-.donation-link-btn {
-  padding: 60px 80px;
-  border-radius: 10px;
-  font-size: 40px;
-  color: #fff;
-  background-color: #f57a00;
+.user-show-name span {
+  font-size: 20px;
+  color: black;
 }
 
-/* //寄付機能へのフォーム */
+.page-heading-right a {
+  padding: 5px 10px;
+  border: 1px solid;
+}

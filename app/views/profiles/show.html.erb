@@ -1,6 +1,6 @@
 <%= render 'shared/header' %>
 <div class="main">
-  <div class="profile-view">
+  <div class="user-show-page">
     <div class="user__wrapper">
       <div class="page-heading">
         <div class="page-heading-left">
@@ -10,98 +10,29 @@
           <%= link_to "プロフィールを編集する", edit_profile_path, method: :get %>
         </div>
       </div>
-      <div class="profile-content">
-        <table class="table">
-          <tbody>
-            <tr>
-              <th class="table__col1">ユーザー名</th>
-              <td class="table__col2"><%= current_user.nickname %></td>
-            </tr>
-            <tr>
-              <th class="table__col1">年齢</th>
-              <% if current_user.age == nil %>
-                <td class="table__col2">情報がありません</td>
-              <% else %>
-                <td class="table__col2"><%= current_user.age %>歳</td>
-              <% end %>
-            </tr>
-            <tr>
-              <th class="table__col1">性別</th>
-              <% if current_user.gender_id == nil %>
-                <td class="table__col2">情報がありません</td>
-              <% elsif current_user.gender_id == 1 %>
-                <td class="table__col2">情報がありません</td>
-              <% else %>
-                <td class="table__col2"><%= current_user.gender.type %></td>
-              <% end %>
-            </tr>
-            <tr>
-              <th class="table__col3">自己紹介</th>
-              <% if current_user.introduction == nil %>
-                <td class="table__col4-nil">情報がありません</td>
-              <% elsif current_user.introduction == '' %>
-                <td class="table__col4-nil">情報がありません</td>
-              <% else %>
-                <td class="table__col4"><%= current_user.introduction %></td>
-              <% end %>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-      <div class="user-collections">
-        <h2><span><%= "#{current_user.nickname}"%></span>さんの作品</h2>
-        <ul class='collection-lists'>
-        <% current_user.collections.each do |collection| %>
-          <li class='collection'>
-            <%= link_to collection_path(collection.id) do %>
-            <div class='collectionimg-content'>
-              <%= image_tag collection.images[0], class: "collection-img" if collection.images.attached? %>
-            </div>
-            <div class='collection-info'>
-              <h3 class='collection-title'>
-                <%= collection.title %>
-              </h3>
-                <div class='star-btn'>
-                  <%= image_tag "star.png", class:"star-icon" %>
-                  <span class='star-count'>0</span>
-                </div>
-              <div class="collection-user">
-              </div>
-            </div>
-            <% end %>
-          </li>
-        <% end %>
-        </ul>
-      </div>
-      <div class="favorite-view">
-        <ul class='collection-lists'>
-        <% current_user.favorites.each do |favorite| %>
-          <li class='collection'>
-            <%= link_to collection_path(favorite.collection) do %>
-            <div class='collectionimg-content'>
-              <%= image_tag favorite.collection.images[0], class: "collection-img" if favorite.collection.images.attached? %>
-            </div>
-            <div class='collection-info'>
-              <h3 class='collection-title'>
-                <%= favorite.collection.title %>
-              </h3>
-              <div class="collection-user">
-              <% if  current_user == favorite.user %>
-                <%= link_to  profile_path(@user), class: "collection-nickname" do %>
-                  <%= favorite.collection.user.nickname %>
-                <% end %>
-              <% else %>
-                <%= link_to user_path(favorite.user), class: "collection-nickname" do %>
-                  <%= favorite.collection.user.nickname %>
-                <% end %>
-              <% end %>
-              </div>
-            </div>
-            <% end %>
-          </li>
-        <% end %>
-        </ul>
+            <!--タブ部分-->
+      <ul class="tab-list list-unstyled">
+        <li class="tab tab-active">
+          ユーザー情報
+        </li>
+        <li class="tab">
+          投稿作品
+        </li>
+        <li class="tab">
+          いいねした作品
+        </li>
+      </ul>
+      <!--タブで選択された要素部分-->
+      <div class="tabbox-contents">
+        <div class="tabbox box-show">
+          <%= render 'users/profile' %>    
+        </div>
+        <div class="tabbox">
+          <%= render 'users/collection-show' %>
+        </div>
+        <div class="tabbox">
+          <%= render 'users/favorite' %>
+        </div>
       </div>
     </div>
   </div>

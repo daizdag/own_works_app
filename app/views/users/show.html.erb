@@ -1,44 +1,34 @@
 <%= render 'shared/header' %>
 <div class="main">
-    <div class="donation">
-      <div class="donation-img"></div>
-      <div class="donation-inner">
-        <div class="donation-link-text">
-          <span><%= @user.nickname %></span>さん<br>を支援して応援をしよう！
-        </div>
-        <div class="donation-link">
-          <%= link_to "応援する！", new_user_donation_path(@user), class: 'donation-link-btn' %>
-        </div>
-      </div>
-    </div>
+  <div class="user-show-page">
     <div class="user__wrapper">
       <div class="page-heading">
-        <div class="page-heading-left">
+        <div class="user-show-name">
           <%= "#{@user.nickname}"%><span>さんの情報</span>
         </div>
       </div>
       <!--タブ部分-->
       <ul class="tab-list list-unstyled">
         <li class="tab tab-active">
+          ユーザー情報
+        </li>
+        <li class="tab">
           投稿作品
         </li>
         <li class="tab">
           いいねした作品
         </li>
-        <li class="tab">
-          ユーザー情報
-        </li>
       </ul>
       <!--タブで選択された要素部分-->
       <div class="tabbox-contents">
         <div class="tabbox box-show">
-          <%= render 'users/collection-show' %>    
+          <%= render 'users/profile' %>    
+        </div>
+        <div class="tabbox">
+          <%= render 'users/collection-show' %>
         </div>
         <div class="tabbox">
           <%= render 'users/favorite' %>
-        </div>
-        <div class="tabbox">
-          <%= render 'users/profile' %>
         </div>
       </div>
     </div>

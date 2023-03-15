@@ -1,0 +1,74 @@
+
+/* ユーザー作品 */
+
+.user-collection-show {
+  padding: 10px;
+}
+
+.user-collection-show h2 {
+  font-size: 28px;
+}
+
+.user-collection-show span {
+  font-size: 36px;
+  color: #f57a00;
+}
+
+/* //ユーザー作品 */
+
+.user-collection-lists {
+  height: 700px;
+  border: 1px solid #ccc;
+  overflow: scroll;
+}
+
+.user-collections {
+  height: 170px;
+  margin: 5px 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #f5f5f5;
+}
+
+.user-collections-left {
+  display: flex;
+  align-items: center;
+}
+
+.user-collection-img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.user-collection-title {
+  margin-left: 30px;
+  font-size: 32px;
+}
+
+.user-star-btn {
+  display: flex;
+  align-items: center;
+}
+
+.user-collections-right {
+  margin-right: 15px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.user-star-icon {
+  height: 30px;
+  width: 30px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.user-star-count {
+  font-size: 2vh;
+}

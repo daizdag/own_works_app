@@ -3,7 +3,6 @@ class FavoritesController < ApplicationController
   before_action :set_collection, only: [:create, :destroy]
 
   def show 
-    @collections = Collection.all
   end
 
   def create

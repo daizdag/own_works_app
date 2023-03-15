@@ -1,5 +1,23 @@
-<div class="favorite-view">
-  <% @user.favorites.each do |favorite| %>
-    <%= link_to favorite.collection, collection_path(favorite.collection) %><br>
-  <% end %>
+<div class="user-collection-show">
+  <h2><span><%= "#{@user.nickname}"%></span>さんの作品</h2>
+  <div class='user-collection-lists'>
+    <% @user.favorites.each do |favorite| %>
+      <div class="user-collections">
+        <div class="user-collections-left">
+          <%= link_to collection_path(favorite.collection_id) do %>
+            <%= image_tag favorite.collection.images[0], class: "user-collection-img" if favorite.collection.images.attached? %>
+          <% end %>
+          <div class='user-collection-info'>
+            <%= link_to collection_path(favorite.collection_id), class: "user-collection-title" do %>
+              <%= favorite.collection.title %>
+            <% end %>
+          </div>
+        </div>
+        <div class='user-collections-right'>
+          <%= image_tag "star.png", class:"user-star-icon" %>
+          <span class='user-star-count'><%= Favorite.count_by_collection(favorite.collection.id) %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

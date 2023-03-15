@@ -1,25 +1,23 @@
-<div class="user-collections">
+<div class="user-collection-show">
   <h2><span><%= "#{@user.nickname}"%></span>さんの作品</h2>
-  <ul class='collection-lists'>
+  <div class='user-collection-lists'>
     <% @user.collections.each do |collection| %>
-      <li class='collection'>
-        <%= link_to collection_path(collection.id) do %>
-        <div class='collectionimg-content'>
-          <%= image_tag collection.images[0], class: "collection-img" if collection.images.attached? %>
-        </div>
-        <div class='collection-info'>
-          <h3 class='collection-title'>
-            <%= collection.title %>
-          </h3>
-            <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
-            </div>
-          <div class="collection-user">
+      <div class="user-collections">
+        <div class="user-collections-left">
+          <%= link_to collection_path(collection.id) do %>
+            <%= image_tag collection.images[0], class: "user-collection-img" if collection.images.attached? %>
+          <% end %>
+          <div class='user-collection-info'>
+            <%= link_to collection_path(collection.id), class: "user-collection-title" do %>
+              <%= collection.title %>
+            <% end %>
           </div>
         </div>
-        <% end %>
-      </li>
+        <div class='user-collections-right'>
+          <%= image_tag "star.png", class:"user-star-icon" %>
+          <span class='user-star-count'><%= Favorite.count_by_collection(collection.id) %></span>
+        </div>
+      </div>
     <% end %>
-  </ul>
+  </div>
 </div>

@@ -76,4 +76,7 @@ https://own-works.onrender.com
 # 工夫したポイント
 ・出来るだけ操作がわかるようにそれぞれの項目を大きくシンプルに表示させるように工夫しました。<br>
 ・ユーザーマイページに遷移する際、ユーザーネームをクリックしJavaScriptでリストボタンを表示させそのリストボタンをクリックすると画面遷移が出来るようにしました。<br>
-<a href="https://gyazo.com/202b3b5d4b41032caad0ae85862042f7"><img src="https://i.gyazo.com/202b3b5d4b41032caad0ae85862042f7.gif" alt="Image from Gyazo" width="1000"/></a>
+<a href="https://gyazo.com/10561d1ff5fe2476bd9142dd75965cd2"><img src="https://i.gyazo.com/10561d1ff5fe2476bd9142dd75965cd2.gif" alt="Image from Gyazo" width="1000"/></a>
+
+・ユーザー詳細画面にてプロフィール情報を見やすくするためにカテゴリー別に情報を確認できるようにしました。<br>
+<a href="https://gyazo.com/a9c1e0ba923e234bb0d1b7b5cc9bf7f8"><img src="https://i.gyazo.com/a9c1e0ba923e234bb0d1b7b5cc9bf7f8.gif" alt="Image from Gyazo" width="1000"/></a>

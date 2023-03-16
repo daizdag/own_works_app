@@ -31,6 +31,10 @@ if(location.pathname.match(/\/collections\/\d/)){
     const commentForm = document.getElementById("comment-form")
     commentForm.reset();
 
+    const commentNil = document.querySelector('.comment-nil');
+    if (commentNil) {
+    commentNil.style.display = 'none';
+    }
     }
   })
 }

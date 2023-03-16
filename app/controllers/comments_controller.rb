@@ -8,10 +8,10 @@ class CommentsController < ApplicationController
     end
   end
 
-  def destroy
+  def destroy 
     @collection = Collection.find(params[:collection_id])
-    comment = @collection.comments.find(params[:id])
-    comment.destroy
+    @comment = current_user.comments.find(params[:id])
+    @comment.destroy
     redirect_to collection_path(@collection)
   end
 

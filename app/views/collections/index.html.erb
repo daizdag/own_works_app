@@ -4,19 +4,19 @@
   <% if user_signed_in? %>
     <div class='title-contents'>
       <h2 class='service-title'>
-        ようこそ！<br>クリ<span>コレへ！</span>
+        ようこそ!<br>クリ<span>コレへ!</span>
       </h2>
       <p class='service-explain'>
         クリコレはだれでもかんたんに作品を投稿
       </p>
       <p class='service-explain'>
-        アカウントを登録して創作物を投稿しよう！
+        アカウントを登録して創作物を投稿しよう!
       </p>
     </div>
     <% if current_user.collections == [] %>
       <div class="welcome-create">
         <p>さあ！自分の作品を登録しよう！</p>
-        <%= link_to "投稿する！", new_collection_path, class: 'welcome-create-btn'%>
+        <%= link_to "投稿する!", new_collection_path, class: 'welcome-create-btn'%>
       </div>
     <% end %> 
     <%= link_to(new_collection_path, class: 'purchase-btn') do %>
@@ -25,15 +25,15 @@
   <% else %>
     <div class='title-contents'>
       <h2 class='service-title'>
-        ようこそ！<br>クリコレへ！
+        ようこそ!<br>クリ<span>コレへ!</span>
       </h2>
       <p class='service-explain'>
         クリコレはだれでもかんたんに作品を投稿
       </p>
       <p class='service-explain'>
-        アカウントを登録して創作物を投稿しよう！
+        アカウントを登録して創作物を投稿しよう!
       </p>
-      <%= link_to "登録はこちら！", new_user_registration_path, class: 'welcome-new-user-btn' %>
+      <%= link_to "新規登録はこちら!", new_user_registration_path, class: 'welcome-new-user-btn' %>
     </div>
   <% end %>
   <%# /トップヘッダー %>

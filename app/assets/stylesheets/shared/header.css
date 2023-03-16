@@ -51,11 +51,19 @@ header {
 }
 
 .user_nickname {
+  padding: 3px;
+  border-radius: 5px;
   font-size: 1.2em;
   color: #f57a00;
   text-decoration: none;
   user-select: none;
-  transition: 0.4s ease;
+  cursor: pointer;
+  transition: 0.6s ease;
+}
+
+.user_nickname:hover{
+  color: #fff;
+  background-color: #f57a00;
 }
 
 .user-menu-wrapper {

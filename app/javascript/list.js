@@ -5,13 +5,36 @@ function pullDown() {
   const pullDownButton = document.getElementById("lists")
   const userMenuParents = document.getElementById("user-menu-list")
 
-  pullDownButton.addEventListener('click', function() {
-    if (userMenuParents.getAttribute("style") == "display:block;") {
-      userMenuParents.removeAttribute("style")
-    } else {
-      userMenuParents.setAttribute("style", "display:block;")
-    }
-  })
+
+  let mouseOverPullDownButton = false;
+
+  pullDownButton.addEventListener("mouseover", function () {
+    userMenuParents.style.display = "block";
+    mouseOverPullDownButton = true;
+  });
+
+  pullDownButton.addEventListener("mouseout", function () {
+    mouseOverPullDownButton = false;
+    setTimeout(function () {
+      if (!mouseOverPullDownButton) {
+        userMenuParents.style.display = "none";
+      }
+    }, 100);
+  });
+
+  userMenuParents.addEventListener("mouseover", function () {
+    mouseOverPullDownButton = true;
+  });
+
+  userMenuParents.addEventListener("mouseout", function () {
+    mouseOverPullDownButton = false;
+    setTimeout(function () {
+      if (!mouseOverPullDownButton) {
+        userMenuParents.style.display = "none";
+      }
+    }, 100);
+  });
+
   
   editButton.addEventListener('click', function() {
     if (showEditParents.getAttribute("style") == "display:block;") {

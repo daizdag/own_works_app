@@ -3,10 +3,10 @@
   <div class="user-show-page">
     <div class="user__wrapper">
       <div class="page-heading">
-        <div class="page-heading-left">
-          <%= "#{current_user.nickname}"%><span>さんの情報</span>
+        <div class="user-show-name">
+          <%= "#{@user.nickname}"%><span>さんの情報</span>
         </div>
-        <div class="page-heading-right">
+        <div class="profile-edit-btn">
           <%= link_to "プロフィールを編集する", edit_profile_path, method: :get %>
         </div>
       </div>

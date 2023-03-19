@@ -43,7 +43,7 @@ https://own-works.onrender.com
 <a href="https://gyazo.com/1759bf0a5444b2651adcfe8c03615f77"><img src="https://i.gyazo.com/1759bf0a5444b2651adcfe8c03615f77.gif" alt="Image from Gyazo" width="1000"/></a><br><br>
 
 ・マイページ<br>
-<a href="https://gyazo.com/f474351e238f8299ee9785c190add5b0"><img src="https://i.gyazo.com/f474351e238f8299ee9785c190add5b0.png" alt="Image from Gyazo" width="1337"/></a>
+<a href="https://gyazo.com/e0dbf9fa824a2720109899337771bd28"><img src="https://i.gyazo.com/e0dbf9fa824a2720109899337771bd28.png" alt="Image from Gyazo" width="1151"/></a>
 
 
 # 実装予定の機能

@@ -21,6 +21,9 @@
         <li class="tab">
           お気に入りした作品
         </li>
+        <li class="tab">
+          応援した人
+        </li>
       </ul>
       <!--タブで選択された要素部分-->
       <div class="tabbox-contents">
@@ -32,6 +35,10 @@
         </div>
         <div class="tabbox">
           <%= render 'users/favorite' %>
+        </div>
+        <div class="tabbox">
+          <%= render 'profiles/donation-show' %>
+        </div>
         </div>
       </div>
     </div>

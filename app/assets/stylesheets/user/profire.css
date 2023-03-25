@@ -38,6 +38,7 @@ th {
   width: 400px;
   padding-left: 10px;
   font-size: 24px;
+  overflow-x: scroll;
 }
 
 .table__col3 {

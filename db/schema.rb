@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2023_03_13_113618) do
   create_table "donations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text", null: false
     t.integer "price", null: false
+    t.integer "donationd_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

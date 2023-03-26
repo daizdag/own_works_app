@@ -1,8 +1,12 @@
 class DonationsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_user,   only: [:new, :create]
+
+  def show
+    @donations = Donation.all
+  end
   
   def new
-    @user = User.find(params[:user_id])
     @donation = Donation.new
   end
 
@@ -18,8 +22,12 @@ class DonationsController < ApplicationController
 
   private
 
+  def set_user
+    @user = User.find(params[:user_id])
+  end
+
   def donation_params
-    params.require(:donation).permit(:price, :text).merge(user_id: current_user.id,token: params[:token])
+    params.require(:donation).permit(:price, :text).merge(donationd: @user, user_id: current_user.id, token: params[:token])
   end
 
   def pay_item

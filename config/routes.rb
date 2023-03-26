@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resource :favorites, only: [:show, :create, :destroy]
   end
   resources :users, only: :show do
-    resources :donations, only: [:new, :create]
+    resources :donations, only: [:new, :create, :show]
     get :favorites, on: :collection
   end
   resource :profile, only: [:show, :edit, :update]

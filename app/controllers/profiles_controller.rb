@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
   before_action :set_user,   only: [:show, :edit, :update]
 
   def show
+    @donations = Donation.all
   end
 
   def edit
@@ -17,10 +18,10 @@ class ProfilesController < ApplicationController
 
   private
     def set_user
-        @user = User.find(current_user.id)
+      @user = User.find(current_user.id)
     end
 
     def user_params
-        params.require(:user).permit(:email, :nickname, :age, :gender_id, :introduction)
+      params.require(:user).permit(:email, :nickname, :age, :gender_id, :introduction)
     end
 end

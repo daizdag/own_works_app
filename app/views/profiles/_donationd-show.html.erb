@@ -1,0 +1,20 @@
+<div class="user-donation-show">
+  <h2><span>応援してくれた人</span>の情報</h2>
+  <div class='user-donation-lists'>
+    <% @donations.each do |donation| %>
+      <% if donation.donationd_id == current_user.id %>
+        <div class="user-donations">
+          <div class="user-donations-info">
+            <%= donation.user.nickname %>さんから
+            <div class='user-donations-price'>
+              <%= donation.price %>円応援されました!
+            </div>
+          </div>
+          <div class="donation-text">
+            <%= donation.text %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

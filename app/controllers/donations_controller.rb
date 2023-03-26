@@ -3,6 +3,7 @@ class DonationsController < ApplicationController
   before_action :set_user,   only: [:new, :create]
 
   def show
+    @donations = Donation.all
   end
   
   def new

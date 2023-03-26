@@ -45,5 +45,11 @@
   word-break:break-all;
 }
 
-.donation-text-preview {
+
+/* 寄付された人の情報 */
+
+.donation-nil {
+  width: 200px;
+  height: 300px;
+  background-color: #f57a00;
 }

@@ -6,7 +6,7 @@
 
 .show-view {
   width: 70vw;
-  padding: 60px 0;
+  padding: 60px 0 0;
   margin: 0 auto;
 }
 
@@ -65,15 +65,43 @@
 }
 
 .title {
+  width: 300px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
   font-size: 32px;
   font-weight: 600;
 }
 
+/* メイン画像を中央寄せに */
+.main-image-container {
+  display: flex;
+  justify-content: center;
+}
+
 .main-image {
-  margin-top: 10px;
   height: 400px;
   width: 400px;
   object-fit: contain;
+}
+
+.other-images {
+  display: flex;
+}
+
+.other-image {
+  margin-right: 10px;
+  padding-top: 2px;
+  border: 1px solid #ccc;
+}
+
+.other-image img {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.other-image:hover  {
+  border: 1px solid #f57a00;
 }
 
 .favorite-count{
@@ -153,6 +181,8 @@
 /* コメント */
 
 .comments {
+  width: 70%;
+  margin: 0 auto;
   padding-top: 60px;
   background-color: #fff;
 }
@@ -179,13 +209,10 @@
   color: #ccc;
 }
 
-.user-info {
+.comment-nickname {
   color: #f57a00;
 }
 
-.user-info span {
-  color: #2d2d2d;
-}
 
 .comment-content {
   display: flex;
@@ -219,7 +246,7 @@
 .comment-form {
   width: 70vw;
   height: 350px;
-  margin-bottom: 60px;
+  margin: 0 auto 60px;
   display: flex;
   justify-content: center;
   background-color: #fff;

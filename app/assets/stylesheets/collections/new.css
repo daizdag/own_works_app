@@ -66,12 +66,12 @@
 }
 
 .click-upload>p {
-  width: 200px;
+  width: 250px;
   margin-bottom: 15px;
 }
 
 .other-image {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 #previews {
@@ -79,12 +79,12 @@
 }
 
 .image-btn {
-  width: 200px;
+  width: calc( 100% / 5 );
 }
 
 .preview-image {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   padding: 14px;
   margin: 10px;
   border: 1px solid #ccc;

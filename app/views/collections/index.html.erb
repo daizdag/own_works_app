@@ -64,9 +64,8 @@
   
   <%# 作品一覧 %>
   <div class='collection-contents'>
-    <h2 class='title'>ピックアップカテゴリー</h2>
+    <h2 class='title'>新規投稿作品</h2>
     <div class="subtitle" >
-      新規投稿作品
     </div>
     <ul class='collection-lists'>
       <% @collections.each do |collection| %>
@@ -77,7 +76,11 @@
           </div>
           <div class='collection-info'>
             <h3 class='collection-title'>
-              <%= collection.title %>
+              <% if collection.title.length >= 12 %>
+                <%= collection.title.slice(0, 12)...  %>
+              <% else %>
+                <%= collection.title %>
+              <% end %>
             </h3>
               <div class='star-btn'>
                 <%= image_tag "star.png", class:"star-icon" %>

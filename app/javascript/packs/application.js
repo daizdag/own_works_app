@@ -10,6 +10,7 @@ require('../preview')
 require('../list')
 require("../card")
 require("../tab")
+require("../image")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

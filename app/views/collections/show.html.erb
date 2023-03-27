@@ -25,17 +25,19 @@
         <h2 class="title">
           <%= @collection.title %>
         </h2>
-        <%= image_tag @collection.images[0], class: "main-image" %><br>
-        <div class="other-images">
-          <% @collection.images[1..-1].each do |image| %>
-            <div class="other-image">
-              <%= image_tag image %>
-            </div>
-          <%end%>
-        </div>
+        <% if @collection.images.attached? %>
+            <%= image_tag @collection.images.first.variant(resize_to_limit: [400, 400]), class: 'main-image' %>
+          <div class="other-images">
+            <% @collection.images[0..-1].each do |image| %>
+              <div class="other-image">
+                <%= image_tag image.variant(resize_to_limit: [400, 400]), width: 400, height: 400 %>
+              </div>
+           <% end %>
+          </div>
+        <% end %>
         <div class="favorite-count">
-        <span>お気に入り<%= Favorite.count_by_collection(@collection.id) %></span>
-      </div>
+          <span>お気に入り<%= Favorite.count_by_collection(@collection.id) %></span>
+        </div>
       </div>
       <div class="right-content">
         <div class="collection-explain-box">
@@ -43,26 +45,27 @@
           <div class="collection-point"><%= @collection.point %></div>
         </div>
         <div class="detail-table">
-              <div class="detail-collection"><span>詳細説明</span><br>
-                <%= @collection.content %>
-              </div>
-              <div class="detail-collection"><span>出品者</span>
-                <% if  current_user == @collection.user %>
-                  <%= link_to  profile_path(@user), class: "collection-nickname" do %>
-                    <%= @collection.user.nickname %>
-                  <% end %>
-                <% else %>
-                  <%= link_to user_path(@collection.user), class: "collection-nickname" do %>
-                    <%= @collection.user.nickname %>
-                  <% end %>
-                <% end %>
-              </div>
-              <div class="detail-collection">カテゴリー
-                <%= @collection.category.name %>
-              </div>
+          <div class="detail-collection"><span>詳細説明</span><br>
+            <%= @collection.content %>
+          </div>
+          <div class="detail-collection"><span>出品者</span>
+            <% if  current_user == @collection.user %>
+              <%= link_to  profile_path(@user), class: "collection-nickname" do %>
+                <%= @collection.user.nickname %>
+              <% end %>
+            <% else %>
+              <%= link_to user_path(@collection.user), class: "collection-nickname" do %>
+                <%= @collection.user.nickname %>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="detail-collection">カテゴリー
+            <%= @collection.category.name %>
+          </div>
         </div>
       </div>
-    </div> 
+    </div>
+
     <% if user_signed_in? %>
       <% if current_user != @collection.user %>
         <div class="option">
@@ -79,6 +82,7 @@
         </div>
       <% end %>
     <% end %>
+  </div>
   <%# /作品の概要 %>
 
   <%# コメントリスト %>  

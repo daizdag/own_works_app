@@ -65,6 +65,9 @@
 }
 
 .title {
+  width: 300px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
   font-size: 32px;
   font-weight: 600;
 }
@@ -76,8 +79,8 @@
 }
 
 .main-image {
-  height: 400;
-  width: 400;
+  height: 400px;
+  width: 400px;
   object-fit: contain;
 }
 

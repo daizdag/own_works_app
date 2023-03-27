@@ -96,7 +96,9 @@
         <% @collection.comments.each do |comment| %>
           <div class="comment">
             <div class="user-info">
-              <%= comment.user.nickname %>
+              <%= link_to user_path(comment.user), class: "comment-nickname" do %>
+                <%= comment.user.nickname %>
+              <% end %>
             </div>
             <div class="comment-content">
               <div class="comment-text">

@@ -1,0 +1,23 @@
+<%= render 'shared/header' %>
+<div class="main">
+  <div class="user-show-page">
+    <div class="user__wrapper">
+      <ul class="follow-list list-unstyled">
+        <li class="follow-tab tab-left tab-active">
+          フォローした人
+        </li>
+        <li class="follow-tab">
+          フォローされている人
+        </li>
+      </ul>
+      <div class="tabbox-contents">
+        <div class="tabbox box-show">
+          <%= render 'relationships/followed' %>  
+        </div>
+        <div class="tabbox">
+          <%= render 'relationships/follower' %>  
+        </div>
+      </div>
+  </div>
+  </div>
+</div>

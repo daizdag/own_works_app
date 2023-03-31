@@ -4,6 +4,27 @@
   justify-content: center;
 }
 
+.follow {
+  margin: 20px ;
+}
+
+.follow-btn {
+  border-radius: 20px;
+  padding: 10px 15px;
+  border: 1px solid #f57a00;
+  color: #FFF;
+  background-color: #f57a00;
+  transition: 0.4s ease;
+}
+
+.follow-btn:hover {
+  border-radius: 20px;
+  padding: 10px 15px;
+  border: 1px solid #f57a00;
+  color: #f57a00;
+  background-color: #fff;
+}
+
 .tab-list {
   width: 100%;
   display: flex;

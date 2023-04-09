@@ -13,8 +13,7 @@
               <ul class="user-menu-wrapper hidden" id="user-menu-list">
                 <li class="user-menu-list"><%= link_to "マイページ", profile_path(@user), class: :menu_list_btn %></li>
                 <li class="user-menu-list"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :menu_list_btn  %></li>
-                <li class="user-menu-list"><%= link_to "フォロー", user_followings_path(current_user.id), class: :menu_list_btn  %></li>
-                <li class="user-menu-list"><%= link_to "フォロワー", user_followers_path(current_user.id), class: :menu_list_btn  %></li>
+                <li class="user-menu-list"><%= link_to "フォロー管理", user_relationships_path(current_user.id), class: :menu_list_btn  %></li>
               </ul>
           </div>
         <% else %>

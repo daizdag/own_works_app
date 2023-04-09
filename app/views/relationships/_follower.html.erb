@@ -1,0 +1,10 @@
+<div class="user-collection-show">
+  <div class='user-collection-lists'>
+    <% @user.followers.each do |user| %>
+      <div class="user-follows">
+        <%= link_to user.nickname, user_path(user.id) %>
+         <%=link_to "フォロー外す", user_relationships_path(user),class: "follow-delete-btn" , method: :delete %>
+      </div>
+    <% end %>
+  </div>
+</div>

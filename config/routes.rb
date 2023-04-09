@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'relationships/followings'
-  get 'relationships/followers'
   devise_for :users
   root to: 'collections#index'
   resources :collections do
@@ -11,8 +9,6 @@ Rails.application.routes.draw do
     resources :donations, only: [:new, :create, :show]
     resource :relationships, only: [:show, :create, :destroy]
     get :favorites, on: :collection
-    get 'followings' => 'relationships#followings', as: 'followings'
-    get 'followers' => 'relationships#followers', as: 'followers'
   end
   resource :profile, only: [:show, :edit, :update]
   
